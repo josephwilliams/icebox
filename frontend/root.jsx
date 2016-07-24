@@ -11,38 +11,35 @@ var IndexRoute = ReactRouter.IndexRoute;
 var hashHistory = ReactRouter.hashHistory;
 
 //Components
-var Splash = require('./components/splash.jsx');
-var BeersIndex = require('./components/beersIndex.jsx');
-var BeerShow = require('./components/beerShow.jsx');
+var Splash = require('./components/splash/splash.jsx');
+var BeersIndex = require('./components/beers/beersIndex.jsx');
+var BeerShow = require('./components/beers/beerShow.jsx');
 
 //Source
 var App = React.createClass({
   render: function () {
     return (
-      <div>
+      <div className="content">
         {this.props.children}
       </div>
     );
   }
 });
 
-var Router = (
-  <Route path="/" component={App}>
-    <Router history={hashHistory}/>
-    <IndexRoute component={Splash} />
-    <Route path="beers" component={BeersIndex} />
-      <Route path="beers/:beerId" component={BeerShow} />
-  </Route>
-  </Route>
+var routes = (
+  <Router history={hashHistory} >
+    <Route path="/" component={App} >
+      <IndexRoute component={Splash} />
+      <Route path="splash" component={Splash} />
+      <Route path="beers" component={BeersIndex} />
+        <Route path="beers/:beerId" component={BeerShow} />
+    </Route>
+  </Router>
 );
 
-document.addEventListener("DOMContentLoaded", function () {
-  var root = document.getElementById("content");
-  Modal.setAppElement(document.body);
-  ReactDOM.render(Router, root);
-});
 
 document.addEventListener("DOMContentLoaded", function () {
+  Modal.setAppElement(document.body);
   var root = document.getElementById("root");
-  ReactDOM.render(Router, root);
+  ReactDOM.render(routes, root);
 });
