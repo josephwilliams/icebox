@@ -1,1 +1,107 @@
+/*Splash*/
+.splash-container {
+  margin: auto;
+  height: 100%;
+}
 
+/*Splash parallax*/
+.splash-background {
+  margin: 0;
+}
+
+.splash-parallax-image img.react-parallax-bgimage {
+  top: 470px;
+}
+
+/*Splash Header*/
+.splash-header-container {
+  background: #fff;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  border-bottom: 1px solid #f1f1f1;
+  padding: 10px 10% 10px 10%;
+  width: 80%;
+}
+
+.splash-header-center {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 300px;
+}
+
+.splash-header-center img {
+  width: 50px;
+}
+
+.splash-header-center h1 {
+  font-size: 22px;
+  margin: 0;
+}
+
+.splash-header-left {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-end;
+  width: 100%;
+}
+
+.splash-header-right {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-end;
+  width: 100%;
+}
+
+.splash-header-icons-container {
+  width: 100px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.splash-header-link {
+  cursor: pointer;
+}
+
+/*Splash Middle*/
+.splash-middle-container {
+  height: 300px;
+  background: transparent;
+}
+
+/*Splash content*/
+.splash-content-container {
+  margin: auto;
+  background: #fff;
+  height: 600px;
+  display: flex;
+  justify-content: space-around;
+  padding: 20px 15% 20px 15%;
+  min-width: 70%;
+}
+
+.splash-content-text {
+  width: 350px;
+  height: 400px;
+}
+
+.splash-content-container img {
+  width: 350px;
+  height: 400px;
+}
+
+.splash-content-text {
+  background: #f1f1f1;
+  width: 350px;
+  height: 400px;
+  padding-left: 20px;
+}
+
+/*Footer*/
+.splash-footer {
+  width: 100%;
+  background: #414956;
+  min-height: 300px;
+}

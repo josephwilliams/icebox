@@ -13,12 +13,13 @@ const Splash = React.createClass({
   render: function() {
     return (
       <div className="splash-background">
-        <Parallax bgImage="http://live2eat.typepad.com/.a/6a014e8968623c970d017d42a40c16970c-pi"
+        <Parallax bgImage="images/beerwindow.jpeg"
                   strength={400}
-                  blur={2}
+                  blur={0}
                   bgWidth={"100vw"}
-                  bgHeight={"75%"}
-                  className={"splash-parallax-image"}>
+                  bgHeight={"55%"}
+                  className={"splash-parallax-image"}
+                  top={"400"}>
           <div className="splash-container">
             <SplashHeader />
             <SplashMiddle />

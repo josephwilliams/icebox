@@ -4,7 +4,9 @@ var SplashFooter = React.createClass({
 
   render: function() {
     return (
-      <div />
+      <div className="splash-footer">
+
+      </div>
     );
   }
 
