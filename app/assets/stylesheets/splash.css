@@ -16,12 +16,19 @@
 /*Splash Header*/
 .splash-header-container {
   background: #fff;
+  /* margin: auto; */
+  /* display: flex; */
+  /* align-items: center; */
+  /* justify-content: space-around; */
+  border-bottom: 1px solid #f1f1f1;
+  padding: 10px 10% 10px 10%;
+  /* width: 80%; */
+}
+
+.splash-header-top {
   margin: auto;
   display: flex;
   align-items: center;
-  justify-content: space-around;
-  border-bottom: 1px solid #f1f1f1;
-  padding: 10px 10% 10px 10%;
   width: 80%;
 }
 
@@ -39,6 +46,7 @@
 .splash-header-center h1 {
   font-size: 22px;
   margin: 0;
+  cursor: default;
 }
 
 .splash-header-left {
@@ -63,6 +71,18 @@
 
 .splash-header-link {
   cursor: pointer;
+}
+
+.splash-header-link:hover {
+  color: #8e989c;
+}
+
+.splash-header-search {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px 0px 5px 0px;
+  cursor: default;
 }
 
 /*Splash Middle*/
@@ -110,6 +130,7 @@
   justify-content: space-around;
   padding: 20px 15% 20px 15%;
   min-width: 70%;
+  box-shadow: 10px 15px 20px 25px rgba(0, 0, 0, 0.16);
 }
 
 .splash-content-text {
@@ -127,6 +148,7 @@
   width: 350px;
   height: 400px;
   padding-left: 20px;
+  overflow: hidden;
 }
 
 /*Footer*/
