@@ -6,7 +6,8 @@
 .search-input {
   height: 35px;
   width: 300px;
-  box-shadow: 0 20px 10px -10px rgba(200, 200, 200, .5);
+  /*box-shadow: 0 20px 10px -10px rgba(200, 200, 200, .5);*/
+  box-shadow: 0 23px 11px -15px rgba(00, 00, 00, .2);
   padding: 5px;
   border-left: 1px solid rgba(210, 210, 210, 0.23);
   border-top: 1px solid rgba(210, 210, 210, 0.23);
@@ -19,7 +20,7 @@
 }
 
 .search-input:hover {
-  box-shadow: -10px 0 10px -10px rgba(76, 210, 77, 0.5);
+  box-shadow: -10px 0 10px -10px rgba(00, 00, 00, 0.8);
 }
 
 input {
@@ -33,16 +34,21 @@ input {
 .search-button {
   border: none;
   height: 47px;
-  width: 50px;
+  width: 55px;
   position: relative;
   bottom: 2px;
-  background: rgba(76, 210, 77, 0.73);
+  background: rgb(228, 200, 136);
   font-size: 15px;
   cursor: pointer;
   color: white;
   outline: 0;
 }
 
+.search-button:hover {
+  background: rgb(212, 186, 127);
+  box-shadow: -10px 0 10px -10px rgba(00, 00, 00, 0.1);
+}
+
 .search-button:active {
-  box-shadow: -10px 0 10px -10px rgba(76, 210, 77, 0.5);
+  background: rgb(234, 211, 158);
 }
