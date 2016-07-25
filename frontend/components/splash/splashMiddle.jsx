@@ -7,25 +7,21 @@ var SplashMiddle = React.createClass({
     return (
       <div className="splash-middle-container">
         <div className="splash-middle-object">
-          <div className="splash-middle-object-content">
-            <img src="images/beerglass.png"></img>
-            <h3>beers</h3>
-          </div>
-        </div>
-        <div className="splash-middle-object">
-          <div className="splash-middle-object-content">
-            <FontAwesome name="fa fa-flask fa-3x" />
-            <h3>breweries</h3>
-          </div>
-        </div>
-        <div className="splash-middle-object">
-          <div className="splash-middle-object-content">
-            <FontAwesome name="fa fa-search fa-3x" />
-            <h3>search</h3>
-              <div className="splash-header-search">
-                <SearchBar />
-              </div>
-          </div>
+
+            <div className="splash-middle-content-top">
+              <FontAwesome name="fa fa-search fa-3x" />
+              <h3>search</h3>
+              <img src="images/beerglass.png"></img>
+              <h3>beers</h3>
+              <FontAwesome name="fa fa-flask fa-3x" />
+              <h3>breweries</h3>
+            </div>
+            <div className="splash-middle-content-bottom">
+                <div className="splash-header-search">
+                  <SearchBar />
+                </div>
+            </div>
+
         </div>
       </div>
     );
