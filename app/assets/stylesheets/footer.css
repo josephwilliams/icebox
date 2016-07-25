@@ -36,8 +36,7 @@
 .footer-bottom {
   font-size: 14px;
   display: flex;
-  padding: 50px;
-  width: 100%;
+  padding: 50px 0px 50px 50px;
   background: #505256;
 }
 
