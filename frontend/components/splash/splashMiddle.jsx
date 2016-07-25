@@ -1,27 +1,29 @@
-var React = require('react');
-var FontAwesome = require('react-fontawesome');
-var SearchBar = require('../shared/searchBar');
+import React from 'react';
+import FontAwesome from 'react-fontawesome';
+import SearchBar from '../shared/searchBar';
 
-var SplashMiddle = React.createClass({
+const SplashMiddle = React.createClass({
+
+
   render: function() {
     return (
       <div className="splash-middle-container">
         <div className="splash-middle-object">
-
-            <div className="splash-middle-content-top">
+          <div className="splash-middle-content-top">
+            <div className="splash-middle-content-top-symbols">
               <img src="images/beerglass.png"></img>
-              <h3>beers</h3>
               <FontAwesome name="fa fa-flask fa-3x" />
-              <h3>breweries</h3>
               <FontAwesome name="fa fa-users fa-3x" />
-              <h3>users</h3>
             </div>
-            <div className="splash-middle-content-bottom">
-                <div className="splash-header-search">
-                  <SearchBar />
-                </div>
+            <div className="splash-middle-content-top-text">
+              beers, breweries, and the friends who love them
             </div>
-
+          </div>
+          <div className="splash-middle-content-bottom">
+              <div className="splash-header-search">
+                <SearchBar />
+              </div>
+          </div>
         </div>
       </div>
     );

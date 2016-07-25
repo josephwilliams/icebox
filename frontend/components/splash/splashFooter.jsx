@@ -1,7 +1,6 @@
-var React = require('react');
+import React from 'react';
 
-var SplashFooter = React.createClass({
-
+const SplashFooter = React.createClass({
   render: function() {
     return (
       <div className="splash-footer">
