@@ -4,7 +4,7 @@ class CreateUsers < ActiveRecord::Migration
       t.string :username, null: false
       t.string :password_digest, null: false
       t.string :session_token, null: false
-      t.string :email,
+      t.string :email
       t.string :picture_url, default: "https://s3-us-west-1.amazonaws.com/icebox-beer/default_prof_pic.jpg"
 
       t.timestamps null: false
