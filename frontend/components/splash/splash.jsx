@@ -13,7 +13,7 @@ const Splash = React.createClass({
   render: function() {
     return (
       <div className="splash-background">
-        <Parallax bgImage="images/beerwindow.jpeg"
+        <Parallax bgImage="images/bernal_heights_bg.png"
                   strength={400}
                   blur={0}
                   bgWidth={"100vw"}

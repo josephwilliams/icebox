@@ -98,7 +98,7 @@
 .splash-middle-object {
   width: 550px;
   height: 200px;
-  background: rgba(255, 255, 255, 0.5);
+  background: rgba(255, 255, 255, 0.59);
   border-radius: 10px;
   border: 1px solid rgba(171, 171, 171, 0.51);
   margin: 0px 10px 0px 10px;
@@ -109,17 +109,26 @@
   justify-content: center;
 }
 
-.splash-middle-content-top img {
-  width: 50px;
-}
-
 .splash-middle-content-top {
   display: flex;
   align-items: center;
   justify-content: space-around;
+  flex-direction: column;
   margin: 0 auto;
-  padding: 25px;
   width: 80%;
+}
+
+.splash-middle-content-top-symbols {
+
+}
+
+.splash-middle-content-top-symbols img {
+  width: 43px;
+}
+
+.splash-middle-content-top-text {
+  font-size: 15px;
+  padding: 3px;
 }
 
 /*Splash content*/

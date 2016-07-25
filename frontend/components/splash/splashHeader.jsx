@@ -1,8 +1,8 @@
-var React = require('react');
-var FontAwesome = require('react-fontawesome');
-var SearchBar = require('../shared/searchBar.jsx');
+import React from 'react';
+import FontAwesome from 'react-fontawesome';
+import SearchBar from '../shared/searchBar.jsx';
 
-var splashHeader = React.createClass({
+const splashHeader = React.createClass({
   render: function() {
     return (
       <div className="splash-header-container">

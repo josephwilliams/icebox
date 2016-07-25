@@ -1,8 +1,6 @@
-var React = require('react');
-var PropTypes = React.PropTypes;
+import React from 'react';
 
-var SplashContent = React.createClass({
-
+const SplashContent = React.createClass({
   render: function() {
     return (
       <div className="splash-content-container">

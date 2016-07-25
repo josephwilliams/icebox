@@ -1,8 +1,7 @@
-var React = require('react');
-var FontAwesome = require('react-fontawesome');
+import React from 'react';
+import FontAwesome from 'react-fontawesome';
 
-var SearchBar = React.createClass({
-
+const SearchBar = React.createClass({
   render: function() {
     return (
       <div className="search-bar">
