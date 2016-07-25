@@ -15,22 +15,28 @@ const SplashFooter = React.createClass({
 
   handleScroll: function(event) {
       let scrollTop = event.srcElement.body.scrollTop;
-      this.setState({
-        hopsClass: "footer-top-wiggle"
-      });
 
-      this.handleScroll2();
+      if (scrollTop > 290) {
+        this.setState({ hopsClass: "footer-top-wiggle" });
+      } else if (scrollTop < 290) {
+        this.setState({ hopsClass: "footer-top" });
+      }
   },
 
-  handleScroll2: function (event) {
-    var that = this;
-    setTimeout(function () {
-      that.setState({
-        hopsClass: "footer-top"
-      });
-    }, 1000);
+  contextTypes: {
+    router: React.PropTypes.object.isRequired
+  },
 
-    this.handleScroll();
+  linkBeers: function () {
+    this.context.router.push("beers");
+  },
+
+  linkBreweries: function () {
+    this.context.router.push("breweries");
+  },
+
+  linkSplash: function () {
+    this.context.router.push("splash");
   },
 
   render: function() {
@@ -42,9 +48,9 @@ const SplashFooter = React.createClass({
         </div>
         <div className="footer-bottom">
             <div className="footer-bottom-left">
-              <p>about</p>
-              <p>beers</p>
-              <p>breweries</p>
+              <p onClick={() => this.linkSplash()}>about</p>
+              <p onClick={() => this.linkBeers()}>beers</p>
+              <p onClick={() => this.linkBreweries()}>breweries</p>
               <p>search</p>
               <p>github</p>
             </div>
