@@ -10,7 +10,8 @@
 }
 
 .splash-parallax-image img.react-parallax-bgimage {
-  top: 670px;
+  top: 400px;
+  min-height: 400px;
 }
 
 /*Splash Header*/
@@ -36,12 +37,13 @@
 
 .splash-header-center img {
   width: 50px;
+  cursor: pointer;
 }
 
 .splash-header-center h1 {
   font-size: 22px;
   margin: 0;
-  cursor: default;
+  cursor: pointer;
 }
 
 .splash-header-left {
@@ -61,7 +63,7 @@
 .splash-header-icons-container {
   width: 100px;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 
 .splash-header-link {

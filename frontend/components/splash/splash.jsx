@@ -21,10 +21,8 @@ const Splash = React.createClass({
                   className={"splash-parallax-image"}
                   top={"400"}>
           <div className="splash-container">
-            <SplashHeader />
             <SplashMiddle />
             <SplashContent />
-            <SplashFooter />
           </div>
         </Parallax>
       </div>

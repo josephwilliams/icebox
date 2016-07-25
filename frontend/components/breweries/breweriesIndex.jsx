@@ -5,16 +5,18 @@ import FontAwesome from 'react-fontawesome';
 import SplashHeader from '../splash/splashHeader';
 import SplashFooter from '../splash/splashFooter';
 
-var BeerShow = React.createClass({
+var BreweriesIndex = React.createClass({
 
   render: function() {
     return (
-      <div className="beer-show-container">
-
+      <div className="beers-index-container">
+        <div className="beers-index-content">
+          <h2>Breweries!</h2>
+        </div>
       </div>
     );
   }
 
 });
 
-module.exports = BeerShow;
+module.exports = BreweriesIndex;
