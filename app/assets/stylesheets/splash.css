@@ -14,74 +14,6 @@
   min-height: 400px;
 }
 
-/*Splash Header*/
-.splash-header-container {
-  background: #fff;
-  border-bottom: 1px solid #f1f1f1;
-  padding: 10px 10% 10px 10%;
-}
-
-.splash-header-top {
-  margin: auto;
-  display: flex;
-  align-items: center;
-  width: 80%;
-}
-
-.splash-header-center {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  width: 300px;
-}
-
-.splash-header-center img {
-  width: 50px;
-  cursor: pointer;
-}
-
-.splash-header-center h1 {
-  font-size: 22px;
-  margin: 0;
-  cursor: pointer;
-}
-
-.splash-header-left {
-  display: flex;
-  justify-content: space-around;
-  align-items: flex-end;
-  width: 100%;
-}
-
-.splash-header-right {
-  display: flex;
-  justify-content: space-around;
-  align-items: flex-end;
-  width: 100%;
-}
-
-.splash-header-icons-container {
-  width: 100px;
-  display: flex;
-  justify-content: space-around;
-}
-
-.splash-header-link {
-  cursor: pointer;
-}
-
-.splash-header-link:hover {
-  color: #8e989c;
-}
-
-.splash-header-search {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 15px 0px 5px 0px;
-  cursor: default;
-}
-
 /*Splash Middle*/
 .splash-middle-container {
   height: 300px;
@@ -124,31 +56,56 @@
 }
 
 .splash-middle-content-top-text {
-  font-size: 15px;
   padding: 3px;
+  font-family: 'Reenie Beanie', cursive;
+  font-size: 22px;
+  position: relative;
+  top: 4px;
 }
 
-/*Splash content*/
+/*Splash content / everything below the search */
 .splash-content-container {
   background: #fff;
   height: 600px;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
   padding: 20px 15% 20px 15%;
   min-width: 70%;
-  box-shadow: 10px 15px 20px 25px rgba(0, 0, 0, 0.16);
+}
+
+.splash-content-blocks {
+  display: flex;
+  justify-content: center;
+}
+
+.splash-content-top-quote {
+  display: flex;
+  justify-content: center;
 }
 
 .splash-content-text {
   background: #f1f1f1;
   height: 400px;
+  width: 350px;
   padding-left: 20px;
   overflow: hidden;
   margin: 0;
   margin-left: 21px;
+  position: relative;
 }
 
-.splash-content-container img {
+.splash-content-text .splash-content-text-header {
+  font-family: 'Petit Formal Script', cursive;
+  font-weight: bold;
+  position: absolute;
+  top: 20px;
+  left: 96px;
+  font-size: 22px;
+}
+
+.splash-content-blocks img {
   width: 350px;
   height: 400px;
 }
@@ -156,10 +113,8 @@
 .splash-content-image {
 }
 
-.splash-content-text {
-  background: #f1f1f1;
-  width: 350px;
-  height: 400px;
-  padding-left: 20px;
-  overflow: hidden;
+.splash-content-blocks .splash-content-text img {
+  margin-top: 10px;
+  width: 93%;
+  height: 53px;
 }

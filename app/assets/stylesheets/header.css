@@ -1,0 +1,106 @@
+/*Splash Header*/
+.splash-header-container {
+  background: #fff;
+  border-bottom: 1px solid #f1f1f1;
+  padding: 10px 10% 10px 10%;
+}
+
+.splash-header-top {
+  margin: auto;
+  display: flex;
+  align-items: center;
+  width: 80%;
+}
+
+.splash-header-center {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 300px;
+  position: relative;
+}
+
+.splash-header-center img {
+  width: 50px;
+  cursor: pointer;
+}
+
+.splash-header-center h1 {
+  font-size: 22px;
+  margin: 0;
+  cursor: pointer;
+}
+
+/* Hops Images: */
+/*<div className="hops-overflow">
+  <img src="images/hops-top.png" className="left"></img>
+  <img src="images/hops-top.png" className="inverted-right"></img>
+</div>*/
+
+.hops-overflow {
+  z-index: 10;
+}
+
+.hops-overflow img.left {
+  position: absolute;
+  right: 99px;
+  top: 45px;
+  height: 90px;
+  width: auto;
+  -ms-transform: rotate(7deg);
+  -webkit-transform: rotate(7deg);
+  transform: rotate(49deg);
+}
+
+.hops-overflow img.inverted-right {
+  -moz-transform: scaleX(-1);
+  -o-transform: scaleX(-1);
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+  filter: FlipH;
+  -ms-filter: "FlipH";
+  position: absolute;
+  right: 99px;
+  top: 45px;
+  height: 90px;
+  width: auto;
+  -ms-transform: rotate(7deg);
+  -webkit-transform: rotate(7deg) scaleX(-1);
+  transform: rotate(49deg);
+}
+
+.splash-header-left {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-end;
+  width: 100%;
+}
+
+.splash-header-right {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-end;
+  width: 100%;
+}
+
+.splash-header-icons-container {
+  width: 100px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.splash-header-link {
+  cursor: pointer;
+}
+
+.splash-header-link:hover {
+  color: #8e989c;
+}
+
+.splash-header-search {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px 0px 5px 0px;
+  cursor: default;
+}
