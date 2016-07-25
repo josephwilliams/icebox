@@ -7,7 +7,7 @@ var SearchBar = React.createClass({
     return (
       <div className="search-bar">
         <input placeholder="Search" className="search-input"/>
-        <button className="search-button">go</button>
+        <button className="search-button">seek</button>
       </div>
     );
   }
