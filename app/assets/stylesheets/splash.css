@@ -10,19 +10,14 @@
 }
 
 .splash-parallax-image img.react-parallax-bgimage {
-  top: 470px;
+  top: 670px;
 }
 
 /*Splash Header*/
 .splash-header-container {
   background: #fff;
-  /* margin: auto; */
-  /* display: flex; */
-  /* align-items: center; */
-  /* justify-content: space-around; */
   border-bottom: 1px solid #f1f1f1;
   padding: 10px 10% 10px 10%;
-  /* width: 80%; */
 }
 
 .splash-header-top {
