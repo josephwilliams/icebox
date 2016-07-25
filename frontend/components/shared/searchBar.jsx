@@ -7,7 +7,9 @@ var SearchBar = React.createClass({
     return (
       <div className="search-bar">
         <input placeholder="Search" className="search-input"/>
-        <button className="search-button">seek</button>
+        <button className="search-button">
+          <FontAwesome name="fa fa-search" />
+        </button>
       </div>
     );
   }
