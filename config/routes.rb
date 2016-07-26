@@ -1,10 +1,14 @@
 Rails.application.routes.draw do
-  # The priority is based upon order of creation: first created -> highest priority.
-  # See how all your routes lay out with "rake routes".
-
-  # You can have the root of your site routed with "root"
   root 'static_pages#root'
 
+<<<<<<< HEAD
+  namespace :api, defaults: {format: :json} do
+    resources :users, only: [:create, :index, :show, :update]
+    resource :session, only: [:new, :show, :create, :destroy]
+    resources :beers
+    resources :reviews
+  end
+=======
   namespace :api, defaults: { format: :json } do
     resources :users
     resources :beers
@@ -58,4 +62,5 @@ end
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
   #   end
+>>>>>>> 898da893016fe86ed78d1fd86b0552ad98e5b86e
 end
