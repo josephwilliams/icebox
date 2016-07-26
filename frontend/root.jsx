@@ -12,13 +12,13 @@ var hashHistory = ReactRouter.hashHistory;
 var Link = ReactRouter.link;
 
 //Components
+import Footer from './components/shared/footer.jsx';
+import Header from './components/shared/header.jsx';
 import Splash from './components/splash/splash.jsx';
 import BeersIndex from './components/beers/beersIndex.jsx';
 import BeerShow from './components/beers/beerShow.jsx';
 import BreweriesIndex from './components/breweries/breweriesIndex.jsx';
 import SearchIndex from './components/search/search.jsx';
-import SplashFooter from './components/splash/splashFooter.jsx';
-import SplashHeader from './components/splash/splashHeader.jsx';
 import BeerNew from './components/beers/beerNew.jsx';
 
 //Source
@@ -26,9 +26,9 @@ const App = React.createClass({
   render: function () {
     return (
       <div className="content">
-        <SplashHeader />
+        <Header />
         {this.props.children}
-        <SplashFooter />
+        <Footer />
       </div>
     );
   }

@@ -4,7 +4,7 @@ import FontAwesome from 'react-fontawesome';
 const BeerNew = React.createClass({
   getInitialState: function () {
     return({
-      name: "", brewery: "", type: "", photo_url: ""
+      name: "", brewery: "", type: ""
     });
   },
 
@@ -20,16 +20,11 @@ const BeerNew = React.createClass({
     this.setState({ type: e.target.value });
   },
 
-  updatePhotoUrl: function (e) {
-    this.setState({ photo_url: e.target.value });
-  },
-
   handleSubmit: function () {
     let data = {
       name: this.state.name,
       brewery: this.state.brewery,
       type: this.state.type,
-      photo_url: this.state.photo_url
     }
 
     $.ajax({
@@ -38,6 +33,7 @@ const BeerNew = React.createClass({
       data: data,
       success: function (beerData) {
         console.log("good beer add!");
+        console.log(beerData);
       }
     });
   },
