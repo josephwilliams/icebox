@@ -1,15 +1,17 @@
 import React from 'react';
 import FontAwesome from 'react-fontawesome';
 
-const BeersIndex = React.createClass({
+const BreweriesIndex = React.createClass({
   render: function() {
     return (
       <div className="beers-index-container">
-        <h2>Beer!</h2>
+        <div className="beers-index-content">
+          <h2>Breweries!</h2>
+        </div>
       </div>
     );
   }
 
 });
 
-module.exports = BeersIndex;
+module.exports = BreweriesIndex;

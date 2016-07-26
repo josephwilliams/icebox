@@ -3,6 +3,14 @@ class Api::BeersController < ApplicationController
     @beer = Beer.new
   end
 
+  def index
+    @beers = Beer.all
+  end
+
+  def show
+    @beer = Beer.find(params[:id])
+  end
+
   def create
     @beer = Beer.new(beer_params)
 
@@ -13,12 +21,10 @@ class Api::BeersController < ApplicationController
     end
   end
 
-  def show
-    @beer = Beer.find(params[:id])
-  end
-
-  def index
-    @beers = Beer.all
+  def search
+    beer_results = Beer.where("name LIKE?", "#{params[:search]}")
+    @beers = beer_results
+    render :search
   end
 
   def update

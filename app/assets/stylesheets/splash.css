@@ -10,79 +10,8 @@
 }
 
 .splash-parallax-image img.react-parallax-bgimage {
-  top: 470px;
-}
-
-/*Splash Header*/
-.splash-header-container {
-  background: #fff;
-  /* margin: auto; */
-  /* display: flex; */
-  /* align-items: center; */
-  /* justify-content: space-around; */
-  border-bottom: 1px solid #f1f1f1;
-  padding: 10px 10% 10px 10%;
-  /* width: 80%; */
-}
-
-.splash-header-top {
-  margin: auto;
-  display: flex;
-  align-items: center;
-  width: 80%;
-}
-
-.splash-header-center {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  width: 300px;
-}
-
-.splash-header-center img {
-  width: 50px;
-}
-
-.splash-header-center h1 {
-  font-size: 22px;
-  margin: 0;
-  cursor: default;
-}
-
-.splash-header-left {
-  display: flex;
-  justify-content: space-around;
-  align-items: flex-end;
-  width: 100%;
-}
-
-.splash-header-right {
-  display: flex;
-  justify-content: space-around;
-  align-items: flex-end;
-  width: 100%;
-}
-
-.splash-header-icons-container {
-  width: 100px;
-  display: flex;
-  justify-content: space-between;
-}
-
-.splash-header-link {
-  cursor: pointer;
-}
-
-.splash-header-link:hover {
-  color: #8e989c;
-}
-
-.splash-header-search {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 15px 0px 5px 0px;
-  cursor: default;
+  top: 400px;
+  min-height: 400px;
 }
 
 /*Splash Middle*/
@@ -98,7 +27,7 @@
 .splash-middle-object {
   width: 550px;
   height: 200px;
-  background: rgba(255, 255, 255, 0.5);
+  background: rgba(255, 255, 255, 0.59);
   border-radius: 10px;
   border: 1px solid rgba(171, 171, 171, 0.51);
   margin: 0px 10px 0px 10px;
@@ -109,40 +38,74 @@
   justify-content: center;
 }
 
-.splash-middle-content-top img {
-  width: 50px;
-}
-
 .splash-middle-content-top {
   display: flex;
   align-items: center;
   justify-content: space-around;
+  flex-direction: column;
   margin: 0 auto;
-  padding: 25px;
   width: 80%;
 }
 
-/*Splash content*/
+.splash-middle-content-top-symbols {
+
+}
+
+.splash-middle-content-top-symbols img {
+  width: 43px;
+}
+
+.splash-middle-content-top-text {
+  padding: 3px;
+  font-family: 'Reenie Beanie', cursive;
+  font-size: 22px;
+  position: relative;
+  top: 4px;
+}
+
+/*Splash content / everything below the search */
 .splash-content-container {
   background: #fff;
   height: 600px;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
   padding: 20px 15% 20px 15%;
   min-width: 70%;
-  box-shadow: 10px 15px 20px 25px rgba(0, 0, 0, 0.16);
+}
+
+.splash-content-blocks {
+  display: flex;
+  justify-content: center;
+}
+
+.splash-content-top-quote {
+  display: flex;
+  justify-content: center;
 }
 
 .splash-content-text {
   background: #f1f1f1;
   height: 400px;
+  width: 350px;
   padding-left: 20px;
   overflow: hidden;
   margin: 0;
   margin-left: 21px;
+  position: relative;
 }
 
-.splash-content-container img {
+.splash-content-text .splash-content-text-header {
+  font-family: 'Petit Formal Script', cursive;
+  font-weight: bold;
+  position: absolute;
+  top: 20px;
+  left: 96px;
+  font-size: 22px;
+}
+
+.splash-content-blocks img {
   width: 350px;
   height: 400px;
 }
@@ -150,17 +113,8 @@
 .splash-content-image {
 }
 
-.splash-content-text {
-  background: #f1f1f1;
-  width: 350px;
-  height: 400px;
-  padding-left: 20px;
-  overflow: hidden;
-}
-
-/*Footer*/
-.splash-footer {
-  width: 100%;
-  background: #505256;
-  height: 250px;
+.splash-content-blocks .splash-content-text img {
+  margin-top: 10px;
+  width: 93%;
+  height: 53px;
 }

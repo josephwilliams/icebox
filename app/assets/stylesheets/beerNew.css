@@ -1,0 +1,12 @@
+.beer-new-container {
+  min-height: 54vh;
+  width: 70%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  padding-top: 25px;
+}
+
+.beer-form-container {
+
+}

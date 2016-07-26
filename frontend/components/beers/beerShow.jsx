@@ -1,10 +1,12 @@
-var React = require('react');
+import React from 'react';
+import FontAwesome from 'react-fontawesome';
 
-var BeerShow = React.createClass({
-
+const BeerShow = React.createClass({
   render: function() {
     return (
-      <div />
+      <div className="beer-show-container">
+
+      </div>
     );
   }
 
