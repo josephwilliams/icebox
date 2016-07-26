@@ -1,6 +1,10 @@
 import React from 'react';
 
 const SearchBox = React.createClass({
+  contextTypes: {
+    router: React.PropTypes.object.isRequired
+  },
+
   componentDidMount: function () {
     window.addEventListener('keydown', this.handleKeyDown);
   },
@@ -13,6 +17,10 @@ const SearchBox = React.createClass({
     console.log(event.keyCode);
     if (event.keyCode == 27)
       this.props.closeSearchBox()
+  },
+
+  linkAddBeer: function () {
+    this.context.router.push("new-beer");
   },
 
   render: function() {
@@ -40,7 +48,9 @@ const SearchBox = React.createClass({
           </div>
         </div>
         <div className="search-box-bottom">
-          add something!
+          <div className="add-beer-button" onClick={this.linkAddBeer}>
+            add something!
+          </div>
         </div>
       </div>
     );

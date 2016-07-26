@@ -5,6 +5,11 @@ Rails.application.routes.draw do
   # You can have the root of your site routed with "root"
   root 'static_pages#root'
 
+  namespace :api, defaults: { format: :json } do
+    resources :users
+    resources :beers
+end
+
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 

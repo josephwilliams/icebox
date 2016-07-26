@@ -1,7 +1,7 @@
 //React
-var React = require('react');
-var ReactDOM = require('react-dom');
-var Modal = require("react-modal");
+import React from 'react';
+import ReactDOM from 'react-dom';
+import Modal from "react-modal";
 
 //Router
 var ReactRouter = require('react-router');
@@ -12,15 +12,17 @@ var hashHistory = ReactRouter.hashHistory;
 var Link = ReactRouter.link;
 
 //Components
-var Splash = require('./components/splash/splash.jsx');
-var BeersIndex = require('./components/beers/beersIndex.jsx');
-var BeerShow = require('./components/beers/beerShow.jsx');
-var BreweriesIndex = require('./components/breweries/breweriesIndex.jsx');
-var SplashFooter = require('./components/splash/splashFooter.jsx');
-var SplashHeader = require('./components/splash/splashHeader.jsx');
+import Splash from './components/splash/splash.jsx';
+import BeersIndex from './components/beers/beersIndex.jsx';
+import BeerShow from './components/beers/beerShow.jsx';
+import BreweriesIndex from './components/breweries/breweriesIndex.jsx';
+import SearchIndex from './components/search/search.jsx';
+import SplashFooter from './components/splash/splashFooter.jsx';
+import SplashHeader from './components/splash/splashHeader.jsx';
+import BeerNew from './components/beers/beerNew.jsx';
 
 //Source
-var App = React.createClass({
+const App = React.createClass({
   render: function () {
     return (
       <div className="content">
@@ -32,14 +34,16 @@ var App = React.createClass({
   }
 });
 
-var routes = (
+const routes = (
   <Router history={hashHistory} >
     <Route path="/" component={App} >
       <IndexRoute component={Splash} />
       <Route path="splash" component={Splash} />
+      <Route path="search" component={SearchIndex} />
       <Route path="breweries" component={BreweriesIndex} />
       <Route path="beers" component={BeersIndex} />
         <Route path="beers/:beerId" component={BeerShow} />
+      <Route path="new-beer" component={BeerNew} />
     </Route>
   </Router>
 );
@@ -47,6 +51,6 @@ var routes = (
 
 document.addEventListener("DOMContentLoaded", function () {
   Modal.setAppElement(document.body);
-  var root = document.getElementById("root");
+  const root = document.getElementById("root");
   ReactDOM.render(routes, root);
 });
