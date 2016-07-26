@@ -4,10 +4,8 @@ import { Parallax } from 'react-parallax';
 // https://www.npmjs.com/package/react-parallax
 
 //sub-components
-import SplashHeader from './splashHeader';
 import SplashMiddle from './splashMiddle';
 import SplashContent from './splashContent';
-import SplashFooter from './splashFooter';
 
 const Splash = React.createClass({
   render: function() {
