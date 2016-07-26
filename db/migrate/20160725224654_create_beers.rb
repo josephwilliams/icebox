@@ -3,15 +3,12 @@ class CreateBeers < ActiveRecord::Migration
     create_table :beers do |t|
       t.string :name, null: false
       t.string :brewery, null: false
-      t.string :type, null: false
-      t.string :description
-      t.string :photo_url, default: "images/beer.png"
+      t.float :abv, null: false
+      t.string :style, null: false
+      t.string :description, null: false
+      t.string :photo_url
 
       t.timestamps null: false
     end
-
-    add_index :beers, :name
-    add_index :beers, :type
-    add_index :beers, :brewery
   end
 end

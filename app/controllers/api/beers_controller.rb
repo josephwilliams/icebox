@@ -1,4 +1,8 @@
-class BeersController < ApplicationController
+class Api::BeersController < ApplicationController
+  def new
+    @beer = Beer.new
+  end
+
   def index
     @beers = Beer.all
   end
@@ -10,11 +14,10 @@ class BeersController < ApplicationController
   def create
     @beer = Beer.new(beer_params)
 
-    if @beer.save
+    if @beer.save!
       render :show
     else
-      @errors = @beer.errors
-      render "api/shared/errors"
+      render :errors
     end
   end
 
@@ -23,10 +26,6 @@ class BeersController < ApplicationController
     @beers = beer_results
     render :search
   end
-  
-  # def edit
-  #   @beer = Beer.find(params[:id])
-  # end
 
   def update
     @beer = Beer.find(params[:id])
@@ -34,22 +33,18 @@ class BeersController < ApplicationController
     if @beer.update_attributes(beer_params)
       render :show
     else
-      @errors = @beer.errors
-      render "api/shared/errors"
+      render :errors
     end
   end
 
   def destroy
     @beer = Beer.find(params[:id])
     @beer.destroy
+    render :new
   end
 
   private
   def beer_params
-    params.require(:beer).permit(:name,
-                                 :brewery,
-                                 :type,
-                                 :description,
-                                 :photo_url)
+    params.require(:beer).permit(:name, :brewery, :abv, :style, :description, :photo_url)
   end
 end
