@@ -25,17 +25,17 @@ const splashHeader = React.createClass({
       <div className="splash-header-container">
         <div className="splash-header-top">
           <div className="splash-header-left">
-            <div className="splash-header-link" onClick={() => this.linkSplash()}>
+            <div className="splash-header-link" onClick={this.linkSplash}>
               about
             </div>
-            <div className="splash-header-link" onClick={() => this.linkBeers()}>
+            <div className="splash-header-link" onClick={this.linkBeers}>
               beers
             </div>
-            <div className="splash-header-link" onClick={() => this.linkBreweries()}>
+            <div className="splash-header-link" onClick={this.linkBreweries}>
               breweries
             </div>
           </div>
-          <div className="splash-header-center" onClick={() => this.linkSplash()}>
+          <div className="splash-header-center" onClick={this.linkSplash}>
               <img src="http://www.clker.com/cliparts/5/9/5/1/13179180341098624364beer%20bing.jpg"></img>
               <h1>icebox</h1>
           </div>
