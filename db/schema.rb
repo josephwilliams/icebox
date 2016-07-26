@@ -11,7 +11,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160725025227) do
+ActiveRecord::Schema.define(version: 20160726205255) do
+
+  create_table "beers", force: :cascade do |t|
+    t.string   "name",                                    null: false
+    t.string   "brewery",                                 null: false
+    t.string   "type",                                    null: false
+    t.string   "description"
+    t.string   "photo_url",   default: "images/beer.png"
+    t.datetime "created_at",                              null: false
+    t.datetime "updated_at",                              null: false
+  end
+
+  add_index "beers", ["brewery"], name: "index_beers_on_brewery"
+  add_index "beers", ["name"], name: "index_beers_on_name"
+  add_index "beers", ["type"], name: "index_beers_on_type"
 
   create_table "users", force: :cascade do |t|
     t.string   "username",                                                                                        null: false

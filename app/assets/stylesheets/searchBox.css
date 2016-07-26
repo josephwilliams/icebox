@@ -73,6 +73,15 @@
   cursor: pointer;
 }
 
+.add-beer-button {
+  cursor: pointer;
+}
+
+.add-beer-button:hover {
+  text-decoration: underline;
+  color: grey;
+}
+
 /**/
 /**/
 /*FADE IN*/
