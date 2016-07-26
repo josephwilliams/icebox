@@ -20,7 +20,7 @@
 }
 
 .search-input:hover {
-  box-shadow: -10px 0 10px -10px rgba(00, 00, 00, 0.8);
+  box-shadow: -10px 0 0 -10px rgba(00, 00, 00, 0.8);
 }
 
 input {

@@ -48,9 +48,9 @@ const SplashFooter = React.createClass({
         </div>
         <div className="footer-bottom">
             <div className="footer-bottom-left">
-              <p onClick={() => this.linkSplash()}>about</p>
-              <p onClick={() => this.linkBeers()}>beers</p>
-              <p onClick={() => this.linkBreweries()}>breweries</p>
+              <p onClick={this.linkSplash}>about</p>
+              <p onClick={this.linkBeers}>beers</p>
+              <p onClick={this.linkBreweries}>breweries</p>
               <p>search</p>
               <p>github</p>
             </div>
