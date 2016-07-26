@@ -20,13 +20,17 @@ const splashHeader = React.createClass({
     this.context.router.push("splash");
   },
 
+  linkSearch: function () {
+    this.context.router.push("search");
+  },
+
   render: function() {
     return (
       <div className="splash-header-container">
         <div className="splash-header-top">
           <div className="splash-header-left">
-            <div className="splash-header-link" onClick={this.linkSplash}>
-              about
+            <div className="splash-header-link" onClick={this.linkSearch}>
+              search
             </div>
             <div className="splash-header-link" onClick={this.linkBeers}>
               beers

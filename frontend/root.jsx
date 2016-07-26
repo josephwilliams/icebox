@@ -16,6 +16,7 @@ var Splash = require('./components/splash/splash.jsx');
 var BeersIndex = require('./components/beers/beersIndex.jsx');
 var BeerShow = require('./components/beers/beerShow.jsx');
 var BreweriesIndex = require('./components/breweries/breweriesIndex.jsx');
+import SearchIndex from './components/search/search.jsx';
 var SplashFooter = require('./components/splash/splashFooter.jsx');
 var SplashHeader = require('./components/splash/splashHeader.jsx');
 
@@ -37,6 +38,7 @@ var routes = (
     <Route path="/" component={App} >
       <IndexRoute component={Splash} />
       <Route path="splash" component={Splash} />
+      <Route path="search" component={SearchIndex} />
       <Route path="breweries" component={BreweriesIndex} />
       <Route path="beers" component={BeersIndex} />
         <Route path="beers/:beerId" component={BeerShow} />
