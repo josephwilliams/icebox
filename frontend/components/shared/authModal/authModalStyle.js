@@ -7,8 +7,8 @@ module.exports = {
     marginRight           : '-50%',
     transform             : 'translate(-50%, -50%)',
     opacity               : '0',
-    // transition            : 'opacity 2s',
-    animation             : 'appear 0.3s ease-out'
+    animation             : 'appear 0.3s ease-out',
+    boxShadow             : '0 4px 8px 0 rgba(0, 0, 0, 0.2)'
   },
   overlay: {
     zIndex            : 2,

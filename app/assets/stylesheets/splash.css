@@ -11,9 +11,16 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-image: url("/images/beers-sun.png");
+  background-image: url("/images/cat_beer.jpg");
   background-size: cover;
   background-repeat: no-repeat;
+  background-position-y: -246px;
+}
+
+.splash-middle-background {
+  position: absolute;
+  z-index: -2;
+  height: 300px;
 }
 
 .splash-middle-object {
