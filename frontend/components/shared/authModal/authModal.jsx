@@ -36,7 +36,7 @@ const AuthModal = React.createClass({
 
     return (
       <div className="auth-modal-container">
-        <FontAwesome name="fa fa-users fa-2x" />
+        <FontAwesome name="fa fa-user fa-2x" />
           {this.formHeaders()}
         <div className="auth-modal-form">
           {authForm}
