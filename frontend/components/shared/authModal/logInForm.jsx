@@ -2,7 +2,7 @@ import React from 'react';
 
 var LogInForm = React.createClass ({
   getInitialState: function () {
-    return ({ username: "", password: "" });
+    return ({ username: "", password: "", errorMessage: "" });
   },
 
   updateUsername: function (event) {
@@ -27,8 +27,19 @@ var LogInForm = React.createClass ({
       success: function (userData) {
         that.props.toggleAuthModal();
         console.log(userData)
+      },
+       error: function (errorData) {
+        that.setState({ showErrors: true });
+        that.postErrors(errorData);
       }
     });
+  },
+
+  postErrors: function (errorData) {
+    if (errorData) {
+      var errorsStr = errorData.responseText.substring(12, 44);
+      this.setState({ errorMessage: errorsStr });
+    }
   },
 
   render: function () {
@@ -43,6 +54,9 @@ var LogInForm = React.createClass ({
                  placeholder="password"
                  onChange={this.updatePassword}
                  value={this.state.password}></input>
+           <div className="auth-form-errors">
+             {this.state.errorMessage}
+           </div>
           <input type="submit" value="submit"></input>
           <img src="images/beer_row.jpg"></img>
         </form>

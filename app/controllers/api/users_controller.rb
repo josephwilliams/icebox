@@ -19,7 +19,7 @@ class Api::UsersController < ApplicationController
       render :show
     else
       # @errors = @user.errors.full_messages
-      render :error
+      render :errors
     end
   end
 
