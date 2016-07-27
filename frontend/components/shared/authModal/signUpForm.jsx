@@ -14,17 +14,20 @@ var SignUpForm = React.createClass ({
   },
 
   handleSubmit: function () {
-    var userData = {
+    var user_params = {
       username: this.state.username,
       password: this.state.password
     }
 
+    var that = this;
     $.ajax({
       url: "api/users",
       type: "POST",
-      data: userData,
+      data: {user: {username: user_params.username,
+                    password: user_params.password }},
       success: function (userData) {
         console.log(userData)
+        that.props.toggleAuthModal();
       }
     });
   },
@@ -32,7 +35,7 @@ var SignUpForm = React.createClass ({
   render: function () {
     return (
       <div className="auth-form">
-        <form className="auth-form-inputs">
+        <form className="auth-form-inputs" onSubmit={this.handleSubmit}>
           <input type="text"
                  placeholder="username"
                  onChange={this.updateUsername}

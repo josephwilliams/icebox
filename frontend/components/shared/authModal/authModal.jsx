@@ -32,7 +32,9 @@ const AuthModal = React.createClass({
   },
 
   render: function() {
-    var authForm = this.state.authType ? <SignUpForm /> : <LogInForm />
+    var authForm = this.state.authType ?
+      <SignUpForm toggleAuthModal={this.props.toggleAuthModal}/> :
+      <LogInForm toggleAuthModal={this.props.toggleAuthModal}/>
 
     return (
       <div className="auth-modal-container">

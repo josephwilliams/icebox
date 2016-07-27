@@ -14,16 +14,18 @@ var LogInForm = React.createClass ({
   },
 
   handleSubmit: function () {
-    var userData = {
+    var user_params = {
       username: this.state.username,
       password: this.state.password
     }
 
+    var that = this;
     $.ajax({
       url: "api/session",
       type: "POST",
-      data: {"user_params": {"username": userData.username, "password": userData.username}},
+      data: {user: {username: user_params.username, password: user_params.username}},
       success: function (userData) {
+        that.props.toggleAuthModal();
         console.log(userData)
       }
     });

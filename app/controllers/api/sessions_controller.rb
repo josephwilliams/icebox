@@ -8,13 +8,14 @@ class Api::SessionsController < ApplicationController
       user_params[:username],
       user_params[:password]
     )
+
     if @user.nil?
-      render json: {message: 'Invalid Username and/or Password'}, status: 422
+      render :errors
+      # render json: {message: 'Invalid Username and/or Password'}, status: 422
     else
       login_user!(@user)
       render :show
     end
-
   end
 
   def show
