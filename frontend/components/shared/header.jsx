@@ -1,8 +1,8 @@
 import React from 'react';
 import FontAwesome from 'react-fontawesome';
-// import Modal from 'react-modal-component';
-import Modal, {closeStyle} from 'simple-react-modal';
-import AuthModal from './authModal';
+import Modal from 'react-modal';
+import AuthModal from './authModal/authModal';
+import ModalStyle from './authModal/authModalStyle.js';
 
 const splashHeader = React.createClass({
   contextTypes: {
@@ -10,55 +10,40 @@ const splashHeader = React.createClass({
   },
 
   getInitialState: function () {
-    return({ modalIsOpen: false });
+    return({ modalIsOpen: false, modalAuthType: true });
   },
 
   linkTo: function (address) {
     return () => {this.context.router.push(address)};
   },
 
-  componentDidMount: function () {
-    window.addEventListener('keydown', this.handleKeyDown);
-  },
+  toggleAuthModal: function (authType) {
+    this.setState({ modalAuthType: authType });
 
-  componentWillUnmount: function () {
-    window.removeEventListener('keydown', this.handleKeyDown);
-  },
-
-  handleKeyDown: function (event) {
-    if (event.keyCode == 27 && this.state.modalIsOpen)
-      this.setState({ modalIsOpen: false });
-  },
-
-  toggleAuthModal: function () {
     let newModalState = !this.state.modalIsOpen;
     this.setState({ modalIsOpen: newModalState });
+
+    if (this.state.modalIsOpen)
+      ModalStyle.content.opacity = '0';
+  },
+
+  onModalOpen: function () {
+    ModalStyle.content.opacity = '1';
   },
 
   render: function() {
-    let modalStyle = {
-      content : {
-        top                   : '40%',
-        left                  : '50%',
-        right                 : 'auto',
-        bottom                : 'auto',
-        marginRight           : '-50%',
-        transform             : 'translate(-50%, -50%)',
-        transition            : 'visibility 0s linear 0.3s, opacity 0.3s linear'
-      }
-    }
-
     var nodeModal = null;
     if (this.state.modalIsOpen) {
       nodeModal = (
         <Modal
-          show={this.state.modalIsOpen}
-          onClose={this.toggleAuthModal}
-           containerClassName="auth-modal"
-           closeOnOuterClick={true}
+          isOpen={this.state.modalIsOpen}
+          onRequestClose={this.toggleAuthModal}
+          onAfterOpen={this.onModalOpen}
+          style={ModalStyle}
          >
-          <AuthModal />
-         </Modal>
+
+          <AuthModal authType={this.state.modalAuthType} />
+        </Modal>
       )
     }
 
@@ -82,10 +67,10 @@ const splashHeader = React.createClass({
               <h1>icebox</h1>
           </div>
           <div className="splash-header-right">
-            <div className="splash-header-link" onClick={this.toggleAuthModal}>
+            <div className="splash-header-link" onClick={() => this.toggleAuthModal(false)}>
               login
             </div>
-            <div className="splash-header-link" onClick={this.toggleAuthModal}>
+            <div className="splash-header-link" onClick={() => this.toggleAuthModal(true)}>
               signup
             </div>
             <div className="splash-header-icons-container">
