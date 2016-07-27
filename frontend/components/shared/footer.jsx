@@ -5,23 +5,23 @@ const SplashFooter = React.createClass({
       return({ hopsClass: "footer-top" });
   },
 
-  componentDidMount: function() {
-      window.addEventListener('scroll', this.handleScroll);
-  },
-
-  componentWillUnmount: function() {
-      window.removeEventListener('scroll', this.handleScroll);
-  },
-
-  handleScroll: function(event) {
-      let scrollTop = event.srcElement.body.scrollTop;
-
-      if (scrollTop > 290) {
-        this.setState({ hopsClass: "footer-top-wiggle" });
-      } else if (scrollTop < 290) {
-        this.setState({ hopsClass: "footer-top" });
-      }
-  },
+  // componentDidMount: function() {
+  //     window.addEventListener('scroll', this.handleScroll);
+  // },
+  //
+  // componentWillUnmount: function() {
+  //     window.removeEventListener('scroll', this.handleScroll);
+  // },
+  //
+  // handleScroll: function(event) {
+  //     let scrollTop = event.srcElement.body.scrollTop;
+  //
+  //     if (scrollTop > 290) {
+  //       this.setState({ hopsClass: "footer-top-wiggle" });
+  //     } else if (scrollTop < 290) {
+  //       this.setState({ hopsClass: "footer-top" });
+  //     }
+  // },
 
   contextTypes: {
     router: React.PropTypes.object.isRequired
@@ -44,7 +44,7 @@ const SplashFooter = React.createClass({
     return (
       <div className="footer">
         <div className={classTitle} id="trigger">
-          <img src="images/hops.png" id="animate"></img>
+          <img src="images/beers_shelf.jpg" id="animate"></img>
         </div>
         <div className="footer-bottom">
             <div className="footer-bottom-left">
