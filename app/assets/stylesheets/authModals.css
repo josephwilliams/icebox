@@ -1,0 +1,46 @@
+.auth-modal {
+  border-radius: 10px;
+  -webkit-animation: appear 0.5s; /* Safari, Chrome and Opera > 12.1 */
+     -moz-animation: appear 0.5s; /* Firefox < 16 */
+      -ms-animation: appear 0.5s; /* Internet Explorer */
+       -o-animation: appear 0.5s; /* Opera < 12.1 */
+          animation: appear 0.5s;
+}
+
+.auth-modal-container {
+  width: 300px;
+  height: 300px;
+  margin: 0 auto;
+}
+
+/**/
+/**/
+/*FADE IN*/
+@keyframes appear {
+    from { opacity: 0; top: 30px; }
+    to   { opacity: 1; top: 0px; }
+}
+
+/* Firefox < 16 */
+@-moz-keyframes appear {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Safari, Chrome and Opera > 12.1 */
+@-webkit-keyframes appear {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Internet Explorer */
+@-ms-keyframes appear {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Opera < 12.1 */
+@-o-keyframes appear {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}

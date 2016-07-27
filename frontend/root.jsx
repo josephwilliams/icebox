@@ -1,7 +1,7 @@
 //React
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Modal from "react-modal";
+// import Modal from "react-modal";
 
 //Router
 var ReactRouter = require('react-router');
@@ -50,7 +50,7 @@ const routes = (
 
 
 document.addEventListener("DOMContentLoaded", function () {
-  Modal.setAppElement(document.body);
+  // Modal.setAppElement(document.body);
   const root = document.getElementById("root");
   ReactDOM.render(routes, root);
 });

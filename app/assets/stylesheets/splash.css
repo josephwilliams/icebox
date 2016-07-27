@@ -1,18 +1,19 @@
-/*Splash*/
+/* Splash */
 .splash-container {
   margin: auto;
   height: 100%;
 }
 
-/*Splash Middle*/
+/* Splash Middle; the search box */
 .splash-middle-container {
   height: 300px;
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-image: url("https://67.media.tumblr.com/1a211896375ebf95b1cafc8813299132/tumblr_oay95aONyL1vns4tpo1_1280.png");
-  background-size: contain;
+  background-image: url("/images/beers-sun.png");
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .splash-middle-object {
@@ -39,7 +40,6 @@
 }
 
 .splash-middle-content-top-symbols {
-
 }
 
 .splash-middle-content-top-symbols img {

@@ -20,10 +20,8 @@
     "react": "^15.2.1",
     "react-dom": "^15.2.1",
     "react-fontawesome": "^1.1.0",
-    "react-modal": "^1.4.0",
-    "react-parallax": "^0.4.3",
     "react-router": "^2.6.0",
-    "scrollmagic": "^2.0.5",
+    "simple-react-modal": "^0.4.9",
     "webpack": "^1.13.1"
   }
 }
