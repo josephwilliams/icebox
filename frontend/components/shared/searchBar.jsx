@@ -33,6 +33,7 @@ const SearchBar = React.createClass({
                value={this.state.searchInput}
                onChange={this.handleSearchInput}
                onKeyUp={this.handleSearchInput}
+               autoFocus={focus}
                />
         <button className="search-button">
           <FontAwesome name="fa fa-search" />
