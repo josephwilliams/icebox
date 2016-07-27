@@ -4,24 +4,15 @@
   height: 100%;
 }
 
-/*Splash parallax*/
-.splash-background {
-  margin: 0;
-}
-
-.splash-parallax-image img.react-parallax-bgimage {
-  top: 400px;
-  min-height: 400px;
-}
-
 /*Splash Middle*/
 .splash-middle-container {
   height: 300px;
-  background: transparent;
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
+  background-image: url("https://67.media.tumblr.com/1a211896375ebf95b1cafc8813299132/tumblr_oay95aONyL1vns4tpo1_1280.png");
+  background-size: contain;
 }
 
 .splash-middle-object {

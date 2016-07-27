@@ -14,7 +14,6 @@ const SearchBox = React.createClass({
   },
 
   handleKeyDown: function (event) {
-    console.log(event.keyCode);
     if (event.keyCode == 27)
       this.props.closeSearchBox()
   },
