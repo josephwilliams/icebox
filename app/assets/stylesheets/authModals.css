@@ -92,7 +92,7 @@ h4.auth-modal-header-selected:hover {
   height: 36px;
   border: none;
   padding: 8px;
-  background: rgba(255, 216, 125, 0.7);
+  background: rgb(228, 200, 136);
   margin: 2px;
   box-shadow: 0px 19px 14px -16px rgba(187, 187, 187, 0.61);
   outline: none;
@@ -101,7 +101,7 @@ h4.auth-modal-header-selected:hover {
 }
 
 .auth-form-inputs input[type=submit]:hover {
-  background: rgba(255, 216, 125, 0.86);
+  background: rgb(241, 212, 148);
   transition: 0.5s;
 }
 

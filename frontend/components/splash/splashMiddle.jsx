@@ -16,6 +16,7 @@ const SplashMiddle = React.createClass({
       "left": "5px"
     }
 
+    // TODO: .splash-middle-background fixed pos. bg image after splash-middle-container
     return (
       <div className="splash-middle-container">
         <div className="splash-middle-object">
