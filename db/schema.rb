@@ -11,24 +11,31 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-<<<<<<< HEAD
-ActiveRecord::Schema.define(version: 20160725234316) do
+ActiveRecord::Schema.define(version: 20160727003132) do
 
   create_table "beers", force: :cascade do |t|
     t.string   "name",        null: false
     t.string   "brewery",     null: false
     t.float    "abv",         null: false
     t.string   "style",       null: false
-    t.string   "description", null: false
+    t.string   "description"
     t.string   "photo_url"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
   end
 
+  create_table "breweries", force: :cascade do |t|
+    t.string   "name",       null: false
+    t.string   "location"
+    t.string   "logo_url"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "reviews", force: :cascade do |t|
     t.integer  "beer_id",    null: false
     t.integer  "user_id",    null: false
-    t.integer  "overall"
+    t.integer  "overall",    null: false
     t.integer  "aroma"
     t.integer  "taste"
     t.integer  "appearance"
@@ -38,23 +45,6 @@ ActiveRecord::Schema.define(version: 20160725234316) do
 
   add_index "reviews", ["beer_id"], name: "index_reviews_on_beer_id"
   add_index "reviews", ["user_id"], name: "index_reviews_on_user_id"
-=======
-ActiveRecord::Schema.define(version: 20160726205255) do
-
-  create_table "beers", force: :cascade do |t|
-    t.string   "name",                                    null: false
-    t.string   "brewery",                                 null: false
-    t.string   "type",                                    null: false
-    t.string   "description"
-    t.string   "photo_url",   default: "images/beer.png"
-    t.datetime "created_at",                              null: false
-    t.datetime "updated_at",                              null: false
-  end
-
-  add_index "beers", ["brewery"], name: "index_beers_on_brewery"
-  add_index "beers", ["name"], name: "index_beers_on_name"
-  add_index "beers", ["type"], name: "index_beers_on_type"
->>>>>>> 898da893016fe86ed78d1fd86b0552ad98e5b86e
 
   create_table "users", force: :cascade do |t|
     t.string   "username",                                                                                        null: false
