@@ -13,7 +13,8 @@ var LogInForm = React.createClass ({
     this.setState({ password: event.target.value });
   },
 
-  handleSubmit: function () {
+  handleSubmit: function (e) {
+    e.preventDefault();
     var user_params = {
       username: this.state.username,
       password: this.state.password

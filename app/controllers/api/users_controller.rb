@@ -18,8 +18,7 @@ class Api::UsersController < ApplicationController
       login_user!(@user)
       render :show
     else
-      # @errors = @user.errors.full_messages
-      render :errors
+      render :errors, status: 422
     end
   end
 
