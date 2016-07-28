@@ -17,15 +17,15 @@ const AuthModal = React.createClass({
     if (this.state.authType) {
       return (
         <div className="auth-modal-header">
-          <h4 className="auth-modal-header-selected">sign up</h4>
           <h4 className="auth-modal-header-unselected" onClick={this.toggleForm}>log in</h4>
+          <h4 className="auth-modal-header-selected">sign up</h4>
         </div>
       )
     } else {
       return (
         <div className="auth-modal-header">
-          <h4 className="auth-modal-header-unselected" onClick={this.toggleForm}>sign up</h4>
           <h4 className="auth-modal-header-selected">log in</h4>
+          <h4 className="auth-modal-header-unselected" onClick={this.toggleForm}>sign up</h4>
         </div>
       )
     }
