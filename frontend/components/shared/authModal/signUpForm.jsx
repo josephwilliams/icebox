@@ -2,7 +2,8 @@ import React from 'react';
 
 var SignUpForm = React.createClass ({
   getInitialState: function () {
-    return ({ username: "", password: "", errorMessage: "" });
+    return ({ username: "", password: "",
+              errorMessage: "", authErrorsClass: "auth-form-errors" });
   },
 
   updateUsername: function (event) {
@@ -38,7 +39,7 @@ var SignUpForm = React.createClass ({
   postErrors: function (errorData) {
     if (errorData) {
       let message = errorData.responseJSON[0].message;
-      this.setState({ errorMessage: message });
+      this.setState({ errorMessage: message, authErrorsClass: "auth-form-errors-animate" });
     }
   },
 
@@ -54,10 +55,8 @@ var SignUpForm = React.createClass ({
                  placeholder="password"
                  onChange={this.updatePassword}
                  value={this.state.password}></input>
-           <div className="auth-form-errors">
-              <p>
+               <div className={this.state.authErrorsClass}>
                 {this.state.errorMessage}
-              </p>
            </div>
           <input type="submit" value="submit"></input>
           <img src="images/beer_row.jpg"></img>

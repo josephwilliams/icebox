@@ -2,7 +2,8 @@ import React from 'react';
 
 var LogInForm = React.createClass ({
   getInitialState: function () {
-    return ({ username: "", password: "", errorMessage: "" });
+    return ({ username: "", password: "",
+              errorMessage: "", authErrorsClass: "auth-form-errors" });
   },
 
   updateUsername: function (event) {
@@ -38,8 +39,8 @@ var LogInForm = React.createClass ({
 
   postErrors: function (errorData) {
     if (errorData) {
-      var errorsStr = errorData.responseText.substring(12, 44);
-      this.setState({ errorMessage: errorsStr });
+      let message = errorData.responseJSON.message;
+      this.setState({ errorMessage: message, authErrorsClass: "auth-form-errors-animate" });
     }
   },
 
@@ -55,7 +56,7 @@ var LogInForm = React.createClass ({
                  placeholder="password"
                  onChange={this.updatePassword}
                  value={this.state.password}></input>
-           <div className="auth-form-errors">
+           <div className={this.state.authErrorsClass}>
              {this.state.errorMessage}
            </div>
           <input type="submit" value="submit"></input>
