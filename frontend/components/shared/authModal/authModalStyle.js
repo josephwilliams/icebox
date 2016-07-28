@@ -1,5 +1,6 @@
 module.exports = {
   content : {
+    overflow              : 'visible',
     top                   : '38%',
     left                  : '50%',
     right                 : 'auto',
