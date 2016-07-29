@@ -1,5 +1,5 @@
 .beer-new-container {
-  min-height: 54vh;
+  /*min-height: 54vh;*/
   width: 70%;
   margin: 0 auto;
   display: flex;
@@ -8,5 +8,53 @@
 }
 
 .beer-form-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  width: 300px;
+  margin-bottom: 50px;
+}
 
+.beer-form-container label {
+  display: block;
+}
+
+.beer-form-container input[type=text] {
+  width: 250px;
+  height: 33px;
+  margin: 2px;
+  border: none;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.48);
+  margin-bottom: 12px;
+  box-shadow: 0px 19px 14px -16px rgba(187, 187, 187, 0.61);
+  outline: none;
+  font-size: 18px;
+  font-weight: 300;
+}
+
+.beer-form-container input[type=submit] {
+  font-size: 18px;
+  font-weight: 100;
+  color: black;
+  width: 256px;
+  height: 36px;
+  border: none;
+  padding: 8px;
+  background: rgb(228, 200, 136);
+  margin: 2px;
+  box-shadow: 0px 19px 14px -16px rgba(187, 187, 187, 0.61);
+  outline: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.beer-form-container input[type=submit]:hover {
+  background: rgb(241, 212, 148);
+  transition: 0.5s;
+}
+
+.beer-form-container input[type=submit]:hover:active {
+  box-shadow: none;
+  background: rgb(255, 216, 125);
 }

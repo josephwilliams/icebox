@@ -11,6 +11,10 @@ var IndexRoute = ReactRouter.IndexRoute;
 var hashHistory = ReactRouter.hashHistory;
 var Link = ReactRouter.link;
 
+//Redux
+import { Provider } from 'react-redux';
+import Store from "./store/store";
+
 //Components
 import Footer from './components/shared/footer.jsx';
 import Header from './components/shared/header.jsx';
@@ -19,22 +23,24 @@ import BeersIndex from './components/beers/beersIndex.jsx';
 import BeerShow from './components/beers/beerShow.jsx';
 import BreweriesIndex from './components/breweries/breweriesIndex.jsx';
 import SearchIndex from './components/search/search.jsx';
-import BeerNew from './components/beers/beerNew.jsx';
+import BeerNewForm from './components/beers/beerNewForm.jsx';
 
 //Source
 const App = React.createClass({
   render: function () {
     return (
-      <div className="content">
-        <Header />
-        {this.props.children}
-        <Footer />
-      </div>
+      <Provider store={Store}>
+        <div className="content">
+          <Header />
+          {this.props.children}
+          <Footer />
+        </div>
+      </Provider>
     );
   }
 });
 
-const routes = (
+const Routes = (
   <Router history={hashHistory} >
     <Route path="/" component={App} >
       <IndexRoute component={Splash} />
@@ -43,7 +49,7 @@ const routes = (
       <Route path="breweries" component={BreweriesIndex} />
       <Route path="beers" component={BeersIndex} />
         <Route path="beers/:beerId" component={BeerShow} />
-      <Route path="new-beer" component={BeerNew} />
+      <Route path="new-beer" component={BeerNewForm} />
     </Route>
   </Router>
 );
@@ -52,5 +58,5 @@ const routes = (
 document.addEventListener("DOMContentLoaded", function () {
   Modal.setAppElement(document.body);
   const root = document.getElementById("root");
-  ReactDOM.render(routes, root);
+  ReactDOM.render(Routes, root);
 });
