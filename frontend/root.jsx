@@ -23,7 +23,7 @@ import BeersIndex from './components/beers/beersIndex.jsx';
 import BeerShow from './components/beers/beerShow.jsx';
 import BreweriesIndex from './components/breweries/breweriesIndex.jsx';
 import SearchIndex from './components/search/search.jsx';
-import BeerNew from './components/beers/beerNew.jsx';
+import BeerNewForm from './components/beers/beerNewForm.jsx';
 
 //Source
 const App = React.createClass({
@@ -49,7 +49,7 @@ const Routes = (
       <Route path="breweries" component={BreweriesIndex} />
       <Route path="beers" component={BeersIndex} />
         <Route path="beers/:beerId" component={BeerShow} />
-      <Route path="new-beer" component={BeerNew} />
+      <Route path="new-beer" component={BeerNewForm} />
     </Route>
   </Router>
 );
