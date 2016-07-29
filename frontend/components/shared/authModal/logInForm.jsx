@@ -27,10 +27,11 @@ var LogInForm = React.createClass ({
       type: "POST",
       data: {user: {username: user_params.username, password: user_params.username}},
       success: function (userData) {
-        that.props.toggleAuthModal();
         console.log(userData)
+        that.props.toggleAuthModal();
       },
        error: function (errorData) {
+         console.log(errorData);
         that.setState({ showErrors: true });
         that.postErrors(errorData);
       }
