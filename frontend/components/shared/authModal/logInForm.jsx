@@ -31,7 +31,7 @@ var LogInForm = React.createClass ({
         that.props.toggleAuthModal();
       },
        error: function (errorData) {
-         console.log(errorData);
+         var errors = window.errors = errorData;
         that.setState({ showErrors: true });
         that.postErrors(errorData);
       }
