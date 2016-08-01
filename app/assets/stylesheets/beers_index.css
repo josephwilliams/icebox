@@ -14,3 +14,7 @@
   flex-wrap: wrap;
   margin-bottom: 100px;
 }
+
+.beers-index-bottom {
+  height: 200px;
+}

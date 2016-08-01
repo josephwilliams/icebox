@@ -12,7 +12,7 @@ module.exports = {
     boxShadow             : '0 4px 8px 0 rgba(0, 0, 0, 0.2)'
   },
   overlay: {
-    zIndex            : 2,
+    zIndex            : 101,
     position          : 'fixed',
     top               : 0,
     left              : 0,

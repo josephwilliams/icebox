@@ -5,7 +5,7 @@ const BeerShow = React.createClass({
   render: function() {
     return (
       <div className="beer-show-container">
-
+        
       </div>
     );
   }

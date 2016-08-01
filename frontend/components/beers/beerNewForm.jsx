@@ -32,8 +32,9 @@ class BeerNew extends React.Component {
       type: this.state.type,
     };
 
+    props.createBeer(beerData);
+
     // this.setState({ name: "", brewery: "", type: "" });
-    // this.props.createBeer(beerData);
 
     // $.ajax({
     //   url: "api/beers",
@@ -50,26 +51,26 @@ class BeerNew extends React.Component {
     return (
       <div className="beer-new-container">
         <div className="beer-form-container">
-          <form onSubmit={this.handleSubmit} id="beerAddForm">
+          <form onSubmit={this.handleSubmit.bind(this)} id="beerAddForm">
             <label className="label">Name</label>
             <input type="text"
               value={this.state.name}
-              onChange={this.updateName}
+              onChange={this.updateName.bind(this)}
               placeholder={"name"}/>
             <label className="label">Brewery</label>
             <input type="text"
               value={this.state.brewery}
-              onChange={this.updateBrewery}
+              onChange={this.updateBrewery.bind(this)}
               placeholder={"brewery"} />
             <label className="label">Type</label>
             <input type="text"
               value={this.state.style}
-              onChange={this.updateStyle}
+              onChange={this.updateStyle.bind(this)}
               placeholder={"style"} />
             <label className="label">ABV (%)</label>
             <input type="text"
               value={this.state.ABV}
-              onChange={this.updateABV}
+              onChange={this.updateABV.bind(this)}
               placeholder={"0"} />
             <input type="submit" value="submit" />
           </form>

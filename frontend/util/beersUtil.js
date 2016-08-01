@@ -7,7 +7,10 @@ export const fetchBeers = () => (
 );
 
 export const addBeer = data => (
-  Axios.post(root, data).then( r => ( r.data.data[0] ))
+  Axios.post(root, data).then( r => {
+    console.log(r);
+    ( r.data );
+  })
 );
 
 export const updateBeer = (id, data) => (

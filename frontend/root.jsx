@@ -23,7 +23,7 @@ import BeersIndex from './components/beers/beersContainer';
 import BeerShow from './components/beers/beerShow.jsx';
 import BreweriesIndex from './components/breweries/breweriesIndex.jsx';
 import SearchIndex from './components/search/search.jsx';
-import BeerNewForm from './components/beers/beerNewForm.jsx';
+import BeerNewForm from './components/beers/beerFormContainer.jsx';
 
 //Source
 const App = React.createClass({
