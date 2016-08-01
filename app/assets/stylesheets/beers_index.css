@@ -1,0 +1,16 @@
+.beers-index-container {
+  min-height: 100%;
+  width: 70%;
+  margin: 0 auto;
+  position: relative;
+  top: 97px;
+}
+
+.beers-index-items {
+  height: 500px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 100px;
+}

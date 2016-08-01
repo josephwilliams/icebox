@@ -2,6 +2,8 @@
 .splash-container {
   margin: auto;
   height: 100%;
+  position: relative;
+  top: 97px;
 }
 
 /* Splash Middle; the search box */

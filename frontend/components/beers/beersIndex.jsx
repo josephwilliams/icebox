@@ -2,6 +2,7 @@ import React from 'react';
 import FontAwesome from 'react-fontawesome';
 import BeerNewForm from './beerNewForm';
 import { fetchBeers } from '../../actions/beerActions.js';
+import SmallBeerItem from '../shared/beer_items/small_beer_item';
 
 class BeersIndex extends React.Component {
   componentDidMount(){
@@ -10,17 +11,21 @@ class BeersIndex extends React.Component {
 
   beersList() {
     var beers = [];
-    for (var id in this.props.beers) {
-      beers.push(this.props.beers[id]);
+    var beerProps = this.props.beers;
+    for (var key in beerProps) {
+      if (beerProps.hasOwnProperty(key)) {
+        beers.push(beerProps[key]);
+      }
     }
 
-    beers.map( (id, beer) => {
+    return beers.map( (beer, id) => {
       return (
-        <li key={id}>
-          {beer.name}
-          {beer.brewery}
-          {beer.type}
-        </li>
+        <SmallBeerItem name={beer.name}
+                       brewery={beer.brewery}
+                       style={beer.style}
+                       abv={beer.abv}
+                       key={id}
+                       />
       );
     });
   }
@@ -30,7 +35,9 @@ class BeersIndex extends React.Component {
       <div className="beers-index-container">
         <h2>Beer Index</h2>
         <BeerNewForm />
-        {this.beersList()}
+        <div className="beers-index-items">
+          {this.beersList()}
+        </div>
       </div>
     );
   }

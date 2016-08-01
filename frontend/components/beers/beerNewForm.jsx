@@ -5,7 +5,7 @@ class BeerNew extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      name: "", brewery: "", type: ""
+      name: "", brewery: "", style: "", ABV: 0
     };
   }
 
@@ -17,8 +17,12 @@ class BeerNew extends React.Component {
     this.setState({ brewery: e.target.value });
   }
 
-  updateType (e) {
-    this.setState({ type: e.target.value });
+  updateStyle (e) {
+    this.setState({ style: e.target.value });
+  }
+
+  updateABV (e) {
+    this.setState({ ABV: e.target.value });
   }
 
   handleSubmit () {
@@ -59,9 +63,14 @@ class BeerNew extends React.Component {
               placeholder={"brewery"} />
             <label className="label">Type</label>
             <input type="text"
-              value={this.state.type}
-              onChange={this.updateType}
-              placeholder={"type"} />
+              value={this.state.style}
+              onChange={this.updateStyle}
+              placeholder={"style"} />
+            <label className="label">ABV (%)</label>
+            <input type="text"
+              value={this.state.ABV}
+              onChange={this.updateABV}
+              placeholder={"0"} />
             <input type="submit" value="submit" />
           </form>
         </div>
