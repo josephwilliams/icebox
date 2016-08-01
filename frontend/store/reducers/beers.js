@@ -8,5 +8,7 @@ export default function(oldState = {}, action){
       let newBeer = {};
       newBeer[action.beer.id] = action.beer;
       return Object.assign({}, oldState, newBeer);
+    default:
+      return oldState;
   }
 }
