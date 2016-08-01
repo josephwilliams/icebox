@@ -3,7 +3,7 @@ import Axios from 'axios';
 window.Axios = Axios;
 
 export const fetchBeers = () => (
-  Axios.get(root).then( r => r.data.data )
+  Axios.get(root).then( r => r.data )
 );
 
 export const addBeer = data => (

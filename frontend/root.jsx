@@ -19,7 +19,7 @@ import Store from "./store/store";
 import Footer from './components/shared/footer.jsx';
 import Header from './components/shared/header.jsx';
 import Splash from './components/splash/splash.jsx';
-import BeersIndex from './components/beers/beersIndex.jsx';
+import BeersIndex from './components/beers/beersContainer';
 import BeerShow from './components/beers/beerShow.jsx';
 import BreweriesIndex from './components/breweries/breweriesIndex.jsx';
 import SearchIndex from './components/search/search.jsx';

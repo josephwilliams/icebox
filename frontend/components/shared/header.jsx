@@ -10,7 +10,7 @@ const splashHeader = React.createClass({
   },
 
   getInitialState: function () {
-    return({ modalIsOpen: false, modalAuthType: true });
+    return({ headerClass: "splash-header-container", modalIsOpen: false, modalAuthType: true });
   },
 
   linkTo: function (address) {
@@ -31,6 +31,18 @@ const splashHeader = React.createClass({
     ModalStyle.content.opacity = '1';
   },
 
+  componentDidMount: function () {
+    // var that = this;
+    // window.addEventListener("scroll", function () {
+    //   var scrollDown = $(window).scrollTop();
+    //   if (scrollDown > 1) {
+    //     that.setState({ headerClass: "splash-header-container-scroll" });
+    //   } else {
+    //     that.setState({ headerClass: "splash-header-container" });
+    //   }
+    // });
+  },
+
   render: function() {
     var nodeModal = null;
     if (this.state.modalIsOpen) {
@@ -41,7 +53,6 @@ const splashHeader = React.createClass({
           onAfterOpen={this.onModalOpen}
           style={ModalStyle}
          >
-
           <AuthModal authType={this.state.modalAuthType}
                      toggleAuthModal={this.toggleAuthModal}/>
         </Modal>
@@ -49,7 +60,7 @@ const splashHeader = React.createClass({
     }
 
     return (
-      <div className="splash-header-container">
+      <div className={this.state.headerClass}>
         {nodeModal}
         <div className="splash-header-content">
           <div className="splash-header-left">
