@@ -2,7 +2,6 @@ import React from 'react';
 import FontAwesome from 'react-fontawesome';
 import { addBeer, fetchBeers } from '../../actions/beerActions';
 
-
 class BeerNew extends React.Component {
   constructor(props) {
     super(props);
@@ -11,42 +10,24 @@ class BeerNew extends React.Component {
     };
   }
 
-  updateName (e) {
-    this.setState({ name: e.target.value });
-  }
-
-  updateBrewery (e) {
-    this.setState({ brewery: e.target.value });
-  }
-
-  updateStyle (e) {
-    this.setState({ style: e.target.value });
-  }
-
-  updateABV (e) {
-    this.setState({ ABV: e.target.value });
+  updateValue (attribute) {
+    return e => this.setState({ [attribute]: e.target.value });
   }
 
   handleSubmit () {
       var beerData = { beer: {
         name: this.state.name,
         brewery: this.state.brewery,
-        type: this.state.type,
-        abv: this.state.abv
+        style: this.state.style,
+        abv: this.state.ABV
       }
     };
 
-    Store.dispatch ( addBeer(beerData) );
-
-    Store.dispatch ( fetchBeers() );
-
-    // this.props.addBeer(beerData);
-
-    // this.setState({ name: "", brewery: "", type: "" });
+    this.props.addBeer(beerData);
+    this.setState({ name: "", brewery: "", style: "", ABV: 0 });
   }
 
   render () {
-    var myProps = window.myProps = this.props;
     return (
       <div className="beer-new-container">
         <div className="beer-form-container">
@@ -54,22 +35,22 @@ class BeerNew extends React.Component {
             <label className="label">Name</label>
             <input type="text"
               value={this.state.name}
-              onChange={this.updateName.bind(this)}
+              onChange={this.updateValue('name')}
               placeholder={"name"}/>
             <label className="label">Brewery</label>
             <input type="text"
               value={this.state.brewery}
-              onChange={this.updateBrewery.bind(this)}
+              onChange={this.updateValue('brewery')}
               placeholder={"brewery"} />
             <label className="label">Type</label>
             <input type="text"
               value={this.state.style}
-              onChange={this.updateStyle.bind(this)}
+              onChange={this.updateValue('style')}
               placeholder={"style"} />
             <label className="label">ABV (%)</label>
             <input type="text"
               value={this.state.ABV}
-              onChange={this.updateABV.bind(this)}
+              onChange={this.updateValue('abv')}
               placeholder={"0"} />
             <input type="submit" value="submit" />
           </form>

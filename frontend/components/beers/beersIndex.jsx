@@ -1,6 +1,6 @@
 import React from 'react';
 import FontAwesome from 'react-fontawesome';
-import BeerNewForm from './beerNewForm';
+import BeerNewForm from './beerFormContainer';
 import { fetchBeers } from '../../actions/beerActions.js';
 import SmallBeerItem from '../shared/beer_items/small_beer_item';
 

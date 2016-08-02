@@ -9,8 +9,7 @@ export const fetchBeers = () => (
 export const addBeer = data => (
   Axios.post(root, data)
   .then( r => {
-    console.log(r);
-    ( r.data );
+    return ( r.data );
   })
   .catch( error => {
     console.log("error:");
