@@ -2,16 +2,25 @@
 
 .splash-header-container-scroll {
   background: #fff;
-  border-bottom: 1px solid #f1f1f1;
+  border-bottom: 1px solid rgba(228, 200, 136, 0.3);
   position: fixed;
   margin: 0;
   top: 0px;
-  padding-top: 10px;
   width: 100%;
-  height: 85px;
+  padding-top: 15px;
+  height: 45px;
   display: block;
   z-index: 100;
-  /*box-shadow: 0px 1px 30px #f4f4f4;*/
+
+  -webkit-transition: height 0.5s;
+  -moz-transition: height 0.5s;
+  -ms-transition: height 0.5s;
+  -o-transition: height 0.5s;
+  transition: height 0.5s;
+}
+
+.splash-header-container-scroll .splash-header-center img {
+  display: none;
 }
 
 /*Splash Header*/
@@ -22,14 +31,15 @@
   position: fixed;
   z-index: 100;
   width: 100%;
+  height: 77px;
   top: 0;
   /*box-shadow: 0px 1px 30px #f4f4f4;*/
-  /*box-shadow: 0px 8px 34px #f4f4f4;*/
 
-  /* NOT FIXED: */
-  /*background: #fff;
-  border-bottom: 1px solid #f1f1f1;
-  padding: 10px 10% 10px 10%;*/
+  -webkit-transition: height 0.3s;
+  -moz-transition: height 0.3s;
+  -ms-transition: height 0.3s;
+  -o-transition: height 0.3s;
+  transition: height 0.3s;
 }
 
 .splash-header-content {
@@ -57,44 +67,6 @@
   font-size: 22px;
   margin: 0;
   cursor: pointer;
-}
-
-/* Hops Images: */
-/*<div className="hops-overflow">
-  <img src="images/hops-top.png" className="left"></img>
-  <img src="images/hops-top.png" className="inverted-right"></img>
-</div>*/
-
-.hops-overflow {
-  z-index: 10;
-}
-
-.hops-overflow img.left {
-  position: absolute;
-  right: 99px;
-  top: 45px;
-  height: 90px;
-  width: auto;
-  -ms-transform: rotate(7deg);
-  -webkit-transform: rotate(7deg);
-  transform: rotate(49deg);
-}
-
-.hops-overflow img.inverted-right {
-  -moz-transform: scaleX(-1);
-  -o-transform: scaleX(-1);
-  -webkit-transform: scaleX(-1);
-  transform: scaleX(-1);
-  filter: FlipH;
-  -ms-filter: "FlipH";
-  position: absolute;
-  right: 99px;
-  top: 45px;
-  height: 90px;
-  width: auto;
-  -ms-transform: rotate(7deg);
-  -webkit-transform: rotate(7deg) scaleX(-1);
-  transform: rotate(49deg);
 }
 
 .splash-header-left {
