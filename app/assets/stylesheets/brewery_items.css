@@ -15,7 +15,7 @@
 }
 
 .small-brewery-item:hover {
-  background: #f1f1f1;
+  background: rgba(228, 200, 136, 0.3);
 }
 
 .small-brewery-item-content {
@@ -31,6 +31,7 @@
 
 .small-brewery-item-content .image img {
   height: 80px;
+  max-width: 200px;
   width: auto;
 }
 

@@ -6,7 +6,7 @@ class BeerNew extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      name: "", brewery: "", style: "", ABV: 0
+      name: "", brewery: "", style: "", ABV: ""
     };
   }
 
@@ -51,7 +51,7 @@ class BeerNew extends React.Component {
             <input type="text"
               value={this.state.ABV}
               onChange={this.updateValue('ABV')}
-              placeholder={0} />
+              placeholder={"0.0"} />
             <input type="submit" value="submit" />
           </form>
         </div>
