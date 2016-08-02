@@ -32,15 +32,16 @@ const splashHeader = React.createClass({
   },
 
   componentDidMount: function () {
-    // var that = this;
-    // window.addEventListener("scroll", function () {
-    //   var scrollDown = $(window).scrollTop();
-    //   if (scrollDown > 1) {
-    //     that.setState({ headerClass: "splash-header-container-scroll" });
-    //   } else {
-    //     that.setState({ headerClass: "splash-header-container" });
-    //   }
-    // });
+    var that = this;
+    window.addEventListener('scroll', function(e){
+        var distanceY = window.pageYOffset || document.documentElement.scrollTop;
+        var shrinkOn = 20;
+        if (distanceY > shrinkOn) {
+            that.setState({ headerClass: "splash-header-container-scroll"});
+        } else {
+            that.setState({ headerClass: "splash-header-container"});
+        }
+    });
   },
 
   render: function() {
