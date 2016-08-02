@@ -28,8 +28,8 @@ class BreweryNew extends React.Component {
 
   render () {
     return (
-      <div className="beer-new-container">
-        <div className="beer-form-container">
+      <div className="brewery-new-container">
+        <div className="brewery-form-container">
           <form onSubmit={this.handleSubmit.bind(this)} id="beerAddForm">
 
             <label className="label">Name</label>
