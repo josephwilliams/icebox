@@ -1,6 +1,6 @@
 .beers-index-container {
   min-height: 100%;
-  width: 74%; 
+  /* width: 74%; */
   margin: 0 auto;
   position: relative;
   top: 97px;
@@ -11,23 +11,27 @@
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
-  margin-bottom: 50px
+  margin-bottom: 50px;
+  margin: 0 auto;
+  width: 84%;
+  padding-bottom: 30px;
 }
 
 .beers-index-top {
-  width: 60%;
   margin: 0 auto;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: 50px;
+  padding-top: 25px;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+    border-bottom: 1px solid rgb(212, 186, 127);
+  background: rgba(241, 212, 148, 0.77);
 }
 
 .beers-index-top img {
   height: 350px;
-  width: auto;
+  width: 310px;
+  border: 1px solid rgb(212, 186, 127);
+  border-radius: 10px;
 }
-
-/*.beers-index-bottom {
-  height: 200px;
-}*/
