@@ -50,8 +50,8 @@ class BeerNew extends React.Component {
             <label className="label">ABV (%)</label>
             <input type="text"
               value={this.state.ABV}
-              onChange={this.updateValue('abv')}
-              placeholder={"0"} />
+              onChange={this.updateValue('ABV')}
+              placeholder={0} />
             <input type="submit" value="submit" />
           </form>
         </div>
