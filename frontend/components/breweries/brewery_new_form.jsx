@@ -22,7 +22,7 @@ class BreweryNew extends React.Component {
       }
     };
 
-    this.props.addBrewery(beerData);
+    this.props.addBrewery(breweryData);
     this.setState({ name: "", location: "", logo_url: "" });
   }
 

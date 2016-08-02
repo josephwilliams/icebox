@@ -17,7 +17,7 @@ class SmallBreweryItem extends React.Component {
            onClick={this.linkBrewery(this.props.id)}>
         <div className="small-brewery-item-content">
           <div className="image">
-            <img src={this.props.logo_url}></img>
+            <img src={this.props.logoUrl}></img>
           </div>
           <div className="name">
             {this.props.name}

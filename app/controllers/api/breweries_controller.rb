@@ -1,4 +1,4 @@
-class BreweriesController < ApplicationController
+class Api::BreweriesController < ApplicationController
   def new
     @brewery = Brewery.new
   end

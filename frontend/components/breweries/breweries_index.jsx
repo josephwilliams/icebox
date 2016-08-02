@@ -21,7 +21,7 @@ class BreweriesIndex extends React.Component {
     return breweries.map( (brewery, id) => {
       return (
         <SmallBreweryItem name={brewery.name}
-                         brewery={brewery.location}
+                         location={brewery.location}
                          logoUrl={brewery.logo_url}
                          id={id}
                          key={id}
@@ -35,7 +35,8 @@ class BreweriesIndex extends React.Component {
       <div className="breweries-index-container">
         <div className="beers-index-items">
           <div className="breweries-index-top">
-            <h2>Breweries!</h2>
+            <BreweryNewForm />
+            <img src="https://pixabay.com/static/uploads/photo/2012/04/12/19/03/barrel-30200_960_720.png"></img>
           </div>
           {this.breweriesList()}
         </div>

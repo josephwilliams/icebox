@@ -1,8 +1,9 @@
 export default function(oldState = {}, action){
+
   switch(action.type){
     case "RECEIVE_BREWERIES":
       const newState = {};
-      action.beers.forEach( brewery => { newState[brewery.id] = brewery; } );
+      action.breweries.forEach( brewery => { newState[brewery.id] = brewery; } );
       return newState;
     case "RECEIVE_BREWERY":
       let newBrewery = {};

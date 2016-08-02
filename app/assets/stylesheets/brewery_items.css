@@ -30,18 +30,18 @@
 }
 
 .small-brewery-item-content .image img {
-  height: 60px;
+  height: 80px;
   width: auto;
 }
 
 .small-brewery-item-content .name {
-  font-size: 1.2em;
+  font-size: 2.0em;
   font-weight: bold;
   margin-bottom: 3px;
 }
 
 .small-brewery-item-content .location {
-  font-size: 1em;
+  font-size: 1.2em;
   font-weight: normal;
   margin-bottom: 2px;
 }
