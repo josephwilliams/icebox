@@ -4,7 +4,7 @@ import FontAwesome from 'react-fontawesome';
 const BreweriesIndex = React.createClass({
   render: function() {
     return (
-      <div className="beers-index-container">
+      <div className="breweries-index-container">
         <div className="beers-index-content">
           <h2>Breweries!</h2>
         </div>

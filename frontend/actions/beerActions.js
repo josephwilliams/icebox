@@ -17,7 +17,7 @@ export const fetchBeers = () => ({
   type: "FETCH_ALL_BEERS"
 });
 
-export const createBeer = beer => ({
+export const addBeer = beer => ({
   type: "ADD_BEER",
   beer
 });

@@ -24,8 +24,9 @@ class BeersIndex extends React.Component {
                        brewery={beer.brewery}
                        style={beer.style}
                        abv={beer.abv}
+                       id={id}
                        key={id}
-                       />
+        />
       );
     });
   }
@@ -38,6 +39,7 @@ class BeersIndex extends React.Component {
         <div className="beers-index-items">
           {this.beersList()}
         </div>
+        <div className="beers-index-bottom"/>
       </div>
     );
   }
