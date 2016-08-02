@@ -1,5 +1,7 @@
 import React from 'react';
 import FontAwesome from 'react-fontawesome';
+import { addBeer, fetchBeers } from '../../actions/beerActions';
+
 
 class BeerNew extends React.Component {
   constructor(props) {
@@ -26,28 +28,25 @@ class BeerNew extends React.Component {
   }
 
   handleSubmit () {
-    var beerData = {
-      name: this.state.name,
-      brewery: this.state.brewery,
-      type: this.state.type,
+      var beerData = { beer: {
+        name: this.state.name,
+        brewery: this.state.brewery,
+        type: this.state.type,
+        abv: this.state.abv
+      }
     };
 
-    props.createBeer(beerData);
+    Store.dispatch ( addBeer(beerData) );
+
+    Store.dispatch ( fetchBeers() );
+
+    // this.props.addBeer(beerData);
 
     // this.setState({ name: "", brewery: "", type: "" });
-
-    // $.ajax({
-    //   url: "api/beers",
-    //   type: "POST",
-    //   data: data,
-    //   success: function (beerData) {
-    //     console.log("good beer add!");
-    //     console.log(beerData);
-    //   }
-    // });
   }
 
   render () {
+    var myProps = window.myProps = this.props;
     return (
       <div className="beer-new-container">
         <div className="beer-form-container">

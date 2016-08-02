@@ -1,14 +1,16 @@
 import { connect } from 'react-redux';
-import { createBeer } from '../../actions/beerActions';
+import { addBeer } from '../../actions/beerActions';
 import BeerNewForm from './beerNewForm'; // upload beer form
 
-// const mapStateToProps = (state) => ({});
+const mapStateToProps = state => ({
+  beers: state.beers
+});
 
 const mapDispatchToProps = dispatch => ({
-  createBeer: beer => dispatch( createBeer(beer) )
+  addBeer: beer => dispatch( addBeer(beer) )
 });
 
 export default connect(
-  null,
+  mapStateToProps,
   mapDispatchToProps
 )(BeerNewForm);
