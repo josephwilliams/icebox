@@ -21,7 +21,8 @@ import Header from './components/shared/header.jsx';
 import Splash from './components/splash/splash.jsx';
 import BeersIndex from './components/beers/beersContainer';
 import BeerShow from './components/beers/beerShow.jsx';
-import BreweriesIndex from './components/breweries/breweriesIndex.jsx';
+import BreweriesIndex from './components/breweries/breweries_container.jsx';
+import BreweryShow from './components/breweries/brewery_show.jsx';
 import SearchIndex from './components/search/search.jsx';
 import BeerNewForm from './components/beers/beerFormContainer.jsx';
 
@@ -47,6 +48,7 @@ const Routes = (
       <Route path="splash" component={Splash} />
       <Route path="search" component={SearchIndex} />
       <Route path="breweries" component={BreweriesIndex} />
+        <Route path="breweries/:breweryId" component={BreweryShow} />
       <Route path="beers" component={BeersIndex} />
         <Route path="beers/:beerId" component={BeerShow} />
       <Route path="new-beer" component={BeerNewForm} />

@@ -1,4 +1,4 @@
-class BreweriesController < ApplicationController
+class Api::BreweriesController < ApplicationController
   def new
     @brewery = Brewery.new
   end
@@ -40,7 +40,7 @@ class BreweriesController < ApplicationController
   def destroy
     @brewery = Brewery.find(params[:id])
     @brewery.destroy
-    render :new
+    render :index
   end
 
   private
