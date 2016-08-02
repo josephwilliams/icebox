@@ -8,7 +8,6 @@
 
 User.create(username: "joe", password: "password")
 
-# Russian River
 Beer.create(
   name: 'Pliny the Edler',
   brewery: 'Russian River Brewing Company',

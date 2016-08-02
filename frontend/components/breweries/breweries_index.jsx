@@ -33,7 +33,7 @@ class BreweriesIndex extends React.Component {
   render () {
     return (
       <div className="breweries-index-container">
-        <div className="beers-index-items">
+        <div className="breweries-index-items">
           <div className="breweries-index-top">
             <BreweryNewForm />
             <img src="https://pixabay.com/static/uploads/photo/2012/04/12/19/03/barrel-30200_960_720.png"></img>

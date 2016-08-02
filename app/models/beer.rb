@@ -3,5 +3,5 @@ class Beer < ActiveRecord::Base
   validates :name, uniqueness: true
 
   has_many :reviews
-  belongs_to :brewery
+  # belongs_to :brewery, presence: true
 end
