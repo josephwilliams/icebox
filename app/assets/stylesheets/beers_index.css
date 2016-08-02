@@ -7,14 +7,27 @@
 }
 
 .beers-index-items {
-  height: 500px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
-  margin-bottom: 100px;
+  margin-bottom: 50px
 }
 
-.beers-index-bottom {
-  height: 200px;
+.beers-index-top {
+  width: 60%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 50px;
 }
+
+.beers-index-top img {
+  height: 350px;
+  width: auto;
+}
+
+/*.beers-index-bottom {
+  height: 200px;
+}*/
