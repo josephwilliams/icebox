@@ -96,3 +96,24 @@ Beer.create(
   style: 'Pumpkin Ale',
   abv: 7.00
 )
+
+Beer.create(
+  name: 'Golden Monkey',
+  brewery: 'Victory',
+  style: 'Belgian-style Tripel',
+  abv: 9.50
+)
+
+Beer.create(
+  name: 'Gulden Draak',
+  brewery: 'Brouwerij Van Steenberge N.V.',
+  style: 'Belgian Dark Triple',
+  abv: 10.50
+)
+
+Beer.create(
+  name: 'Trappistes Rochefort 8',
+  brewery: 'Brasserie de Rochefort',
+  style: 'Belgian Strong Dark Ale',
+  abv: 9.20
+)

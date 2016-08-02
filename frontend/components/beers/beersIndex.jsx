@@ -1,6 +1,6 @@
 import React from 'react';
 import FontAwesome from 'react-fontawesome';
-import BeerNewForm from './beerNewForm';
+import BeerNewForm from './beerFormContainer';
 import { fetchBeers } from '../../actions/beerActions.js';
 import SmallBeerItem from '../shared/beer_items/small_beer_item';
 
@@ -34,12 +34,13 @@ class BeersIndex extends React.Component {
   render () {
     return (
       <div className="beers-index-container">
-        <h2>Beer Index</h2>
-        <BeerNewForm />
+        <div className="beers-index-top">
+          <BeerNewForm />
+          <img src="http://previews.123rf.com/images/sudowoodo/sudowoodo1509/sudowoodo150900003/44606296-illustration-of-a-cute-old-cartoon-gnome-smoking-pipe-and-holding-beer--Stock-Vector.jpg"></img>
+        </div>
         <div className="beers-index-items">
           {this.beersList()}
         </div>
-        <div className="beers-index-bottom"/>
       </div>
     );
   }
