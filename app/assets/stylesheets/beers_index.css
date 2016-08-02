@@ -1,9 +1,8 @@
 .beers-index-container {
   min-height: 100%;
-  /* width: 74%; */
   margin: 0 auto;
   position: relative;
-  top: 97px;
+  /*top: 97px;*/
 }
 
 .beers-index-items {
@@ -22,7 +21,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  padding-top: 25px;
+  padding-top: 120px;
   margin-bottom: 20px;
   padding-bottom: 20px;
     border-bottom: 1px solid rgb(212, 186, 127);

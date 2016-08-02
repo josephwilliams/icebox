@@ -35,7 +35,7 @@ const splashHeader = React.createClass({
     var that = this;
     window.addEventListener('scroll', function(e){
         var distanceY = window.pageYOffset || document.documentElement.scrollTop;
-        var shrinkOn = 20;
+        var shrinkOn = 1;
         if (distanceY > shrinkOn) {
             that.setState({ headerClass: "splash-header-container-scroll"});
         } else {
