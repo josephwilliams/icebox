@@ -25,6 +25,7 @@ import BreweriesIndex from './components/breweries/breweries_container.jsx';
 import BreweryShow from './components/breweries/brewery_show.jsx';
 import SearchIndex from './components/search/search.jsx';
 import BeerNewForm from './components/beers/beerFormContainer.jsx';
+import TopMessage from './components/shared/top_message';
 
 //Source
 const App = React.createClass({

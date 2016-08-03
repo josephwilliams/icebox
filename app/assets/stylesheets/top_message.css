@@ -1,0 +1,10 @@
+.top-message-container {
+  width: 100%;
+  height: 10px;
+  z-index: 10000;
+  border-bottom: 1px solid white;
+}
+
+.top-message-container-hidden {
+  height: 0px;
+}
