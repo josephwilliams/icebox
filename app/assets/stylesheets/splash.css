@@ -3,7 +3,7 @@
   margin: auto;
   height: 100%;
   position: relative;
-  top: 97px;
+  /*top: 97px;*/
 }
 
 /* Splash Middle; the search box */
@@ -17,6 +17,7 @@
   background-size: cover;
   background-repeat: no-repeat;
   background-position-y: -246px;
+  padding-top: 105px;
 }
 
 .splash-middle-background {
