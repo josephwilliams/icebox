@@ -87,9 +87,15 @@ const splashHeader = React.createClass({
               signup
             </div>
             <div className="splash-header-icons-container">
-              <FontAwesome name="fa fa-twitter" />
-              <FontAwesome name="fa fa-facebook-square" />
-              <FontAwesome name="fa fa-github" />
+              <a href="#">
+                <FontAwesome name="fa fa-twitter" />
+              </a>
+              <a href="#">
+                <FontAwesome name="fa fa-facebook-square" />
+              </a>
+              <a href="http://github.com/josephwilliams/icebox">
+                <FontAwesome name="fa fa-github" />
+              </a>
             </div>
           </div>
         </div>
