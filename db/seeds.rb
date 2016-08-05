@@ -117,6 +117,13 @@ Beer.create(
   abv: 9.20
 )
 
+Beer.create(
+  name: 'Bam Biere',
+  brewery: 'Jolly Pumpkin Artisan Ales',
+  style: 'Farmhouse Ale',
+  abv: 4.50
+)
+
 # Breweries
 
 Brewery.create(
@@ -146,7 +153,7 @@ Brewery.create(
 Brewery.create(
   name: "21st Amendment",
   location: "San Francisco, CA",
-  logo_url: "https://upload.wikimedia.org/wikipedia/en/4/4a/21st_Amendment_Brewery_logo.jpg",
+  logo_url: "http://www.beerboard.tv/USBN.BeerBoard.UI/Images/Logo/21st%20Amendment%20Brewing.png",
 )
 
 Brewery.create(
@@ -177,4 +184,10 @@ Brewery.create(
   name: "Flying Dog",
   location: "Frederick, MD",
   logo_url: "http://www.dcbeer.com/sites/default/files/news/flying%20dog%20logo.jpeg"
+)
+
+Brewery.create(
+  name: "Jolly Pumpkin Artisan Ale",
+  location: "Dexter, MI",
+  logo_url: "http://www.farmhousefest.com/images/2016/logos/jolly-pumpkin.png"
 )
