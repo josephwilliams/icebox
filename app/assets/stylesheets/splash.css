@@ -3,7 +3,7 @@
   margin: auto;
   height: 100%;
   position: relative;
-  top: 97px;
+  /*top: 97px;*/
 }
 
 /* Splash Middle; the search box */
@@ -17,6 +17,7 @@
   background-size: cover;
   background-repeat: no-repeat;
   background-position-y: -246px;
+  padding-top: 105px;
 }
 
 .splash-middle-background {
@@ -25,14 +26,24 @@
   height: 300px;
 }
 
-.splash-middle-object {
-  width: 550px;
-  height: 200px;
-  background: rgba(255, 255, 255, 0.59);
-  border-radius: 10px;
-  border: 1px solid rgba(171, 171, 171, 0.51);
+.splash-middle-object-holder {
+  width: 542px;
+  height: 198px;
+  background: rgba(255, 248, 229, 0.63);
   margin: 0px 10px 0px 10px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.splash-middle-object {
+  width: 520px;
+  height: 177px;
+  border-radius: 12px;
+  border: 3px solid rgba(0, 0, 0, 0.51);
+  box-shadow: 4px 0px 5px 3px rgba(0, 0, 0, 0.24);
   display: flex;
   flex-direction: column;
   align-items: center;

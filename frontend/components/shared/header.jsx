@@ -35,7 +35,7 @@ const splashHeader = React.createClass({
     var that = this;
     window.addEventListener('scroll', function(e){
         var distanceY = window.pageYOffset || document.documentElement.scrollTop;
-        var shrinkOn = 20;
+        var shrinkOn = 1;
         if (distanceY > shrinkOn) {
             that.setState({ headerClass: "splash-header-container-scroll"});
         } else {
@@ -87,9 +87,15 @@ const splashHeader = React.createClass({
               signup
             </div>
             <div className="splash-header-icons-container">
-              <FontAwesome name="fa fa-twitter" />
-              <FontAwesome name="fa fa-facebook-square" />
-              <FontAwesome name="fa fa-github" />
+              <a href="#">
+                <FontAwesome name="fa fa-twitter" />
+              </a>
+              <a href="#">
+                <FontAwesome name="fa fa-facebook-square" />
+              </a>
+              <a href="http://github.com/josephwilliams/icebox">
+                <FontAwesome name="fa fa-github" />
+              </a>
             </div>
           </div>
         </div>

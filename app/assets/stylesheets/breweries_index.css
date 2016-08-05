@@ -1,18 +1,8 @@
-/*.breweries-index-container {
-  min-height: 54vh;
-  width: 70%;
-  margin: 0 auto;
-
-  position: relative;
-  top: 97px;
-}*/
-
 .breweries-index-container {
   min-height: 100%;
-  /* width: 80%; */
   margin: 0 auto;
   position: relative;
-  top: 97px;
+  /*top: 97px;*/
 }
 
 .breweries-index-items {
@@ -31,7 +21,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  padding-top: 30px;
+  padding-top: 120px;
   background: rgba(241, 212, 148, 0.77);
   padding-bottom: 20px;
   margin-bottom: 20px;
