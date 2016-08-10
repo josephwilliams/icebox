@@ -57,7 +57,7 @@ const splashHeader = React.createClass({
           <AuthModal authType={this.state.modalAuthType}
                      toggleAuthModal={this.toggleAuthModal}/>
         </Modal>
-      )
+      );
     }
 
     return (
