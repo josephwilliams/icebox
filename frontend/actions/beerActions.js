@@ -11,8 +11,8 @@ export const receiveBeer = beer => {
   return ({
     type: "RECEIVE_BEER",
     beer
-  })
-}
+  });
+};
 
 //Actions triggering API calls
 export const fetchBeers = () => ({
@@ -23,7 +23,7 @@ export const addBeer = beer => {
     return ({
       type: "ADD_BEER",
       beer
-    })
+    });
   };
 
 export const updateBeer = (id, data) => ({

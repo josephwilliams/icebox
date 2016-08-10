@@ -23,7 +23,7 @@ import BeersIndex from './components/beers/beersContainer';
 import BeerShow from './components/beers/beerShow.jsx';
 import BreweriesIndex from './components/breweries/breweries_container.jsx';
 import BreweryShow from './components/breweries/brewery_show.jsx';
-import SearchIndex from './components/search/search.jsx';
+import SearchIndex from './components/search/searchContainer.jsx';
 import BeerNewForm from './components/beers/beerFormContainer.jsx';
 import TopMessage from './components/shared/top_message';
 
