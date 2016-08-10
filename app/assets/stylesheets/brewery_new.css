@@ -1,0 +1,56 @@
+.brewery-new-container {
+  display: flex;
+  justify-content: center;
+}
+
+.brewery-form-container {
+  width: 260px;
+  background: white;
+  padding: 15px;
+  border-radius: 10px;
+  margin-right: 50px;
+  border: 1px solid rgb(228, 200, 136);
+}
+
+.brewery-form-container label {
+  display: block;
+}
+
+.brewery-form-container input[type=text] {
+  width: 250px;
+  height: 33px;
+  margin: 2px;
+  border: none;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.48);
+  margin-bottom: 12px;
+  box-shadow: 0px 19px 14px -16px rgba(187, 187, 187, 0.61);
+  outline: none;
+  font-size: 18px;
+  font-weight: 300;
+}
+
+.brewery-form-container input[type=submit] {
+  font-size: 18px;
+  font-weight: 100;
+  color: black;
+  width: 256px;
+  height: 36px;
+  border: none;
+  padding: 8px;
+  background: rgb(228, 200, 136);
+  margin: 2px;
+  box-shadow: 0px 19px 14px -16px rgba(187, 187, 187, 0.61);
+  outline: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.brewery-form-container input[type=submit]:hover {
+  background: rgb(241, 212, 148);
+  transition: 0.5s;
+}
+
+.brewery-form-container input[type=submit]:hover:active {
+  box-shadow: none;
+  background: rgb(255, 216, 125);
+}

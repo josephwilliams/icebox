@@ -1,0 +1,8 @@
+.search-index-container {
+  min-height: 54vh;
+  width: 70%;
+  margin: 0 auto;
+
+  position: relative;
+  top: 97px;
+}

@@ -17,6 +17,10 @@ node_modules
 jspm_packages
 
 bundle.js
+bundle.js.map
 
 # Ignore application configuration
 /config/application.yml
+
+#Ignore sqlite
+/db/.sqlite3
