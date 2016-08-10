@@ -7,6 +7,7 @@ export const submitUser = data => {
   for ( let key in data ){
     formData.append( key, data[key] );
   }
+  console.log(formData);
   return(
     fetch(TokenRoot, {
       method: 'POST',

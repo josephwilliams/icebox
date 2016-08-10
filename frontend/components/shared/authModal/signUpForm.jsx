@@ -15,11 +15,11 @@ var SignUpForm = React.createClass ({
   },
 
   handleSubmit: function (e) {
-    e.preventDefault()
+    e.preventDefault();
     var user_params = {
       username: this.state.username,
       password: this.state.password
-    }
+    };
 
     var that = this;
     $.ajax({
@@ -62,8 +62,8 @@ var SignUpForm = React.createClass ({
           <img src="images/beer_row.jpg"></img>
         </form>
       </div>
-    )
+    );
   }
-})
+});
 
 module.exports = SignUpForm;

@@ -19,15 +19,15 @@ var LogInForm = React.createClass ({
     var user_params = {
       username: this.state.username,
       password: this.state.password
-    }
+    };
 
     var that = this;
     $.ajax({
       url: "api/session",
       type: "POST",
-      data: {user: {username: user_params.username, password: user_params.username}},
+      data: {user: {username: user_params.username, password: user_params.password}},
       success: function (userData) {
-        console.log(userData)
+        console.log(userData);
         that.props.toggleAuthModal();
       },
        error: function (errorData) {
@@ -64,7 +64,7 @@ var LogInForm = React.createClass ({
           <img src="images/beer_row.jpg"></img>
         </form>
       </div>
-    )
+    );
   }
 });
 
