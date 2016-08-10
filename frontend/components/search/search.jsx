@@ -3,6 +3,7 @@ import FontAwesome from 'react-fontawesome';
 import Search from 'react-search';
 import { fetchBeers } from '../../actions/beerActions.js';
 import { fetchBreweries } from '../../actions/brewery_actions.js';
+import SmallBeerItem from '../shared/beer_items/small_beer_item';
 
 class SearchIndex extends React.Component {
   componentDidMount(){
@@ -24,6 +25,17 @@ class SearchIndex extends React.Component {
         items.push(breweryProps[key2]);
       }
     }
+    // return items.map( (beer, id) => {
+    //   return (
+    //     <SmallBeerItem name={beer.name}
+    //                    brewery={beer.brewery}
+    //                    style={beer.style}
+    //                    abv={beer.abv}
+    //                    id={id}
+    //                    key={id}
+    //     />
+    //   );
+    // });
     return items;
   }
 
