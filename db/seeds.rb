@@ -129,13 +129,13 @@ Beer.create(
 Brewery.create(
   name: "Yuengling",
   location: "Pottsville, MD",
-  logo_url: "https://upload.wikimedia.org/wikipedia/en/3/3d/Yuengling_logo.png",
+  logo_url: "https://www.yuengling.com/img/layout/logo.png",
 )
 
 Brewery.create(
   name: "Dogfish Head",
   location: "Lewes, DE",
-  logo_url: "http://images.brewbound.com/BreweryLogos/Standard/1970734.dogfishlogo.jpg",
+  logo_url: "https://www.cbf.org/image/area---events/Dogfish-Head-Logo.png",
 )
 
 Brewery.create(
@@ -165,29 +165,35 @@ Brewery.create(
 Brewery.create(
   name: "Molly Pitcher",
   location: "Carlisle, PA",
-  logo_url: "http://res.cloudinary.com/ratebeer/image/upload/w_400,c_limit/brew_23057.jpg",
+  logo_url: "http://mollypitcher.com/wp-content/uploads/2014/04/molly_type1.png",
 )
 
 Brewery.create(
   name: "Victory",
   location: "Downingtown, PA",
-  logo_url: "http://www.binnys.com/blog/wp-content/uploads/2012/12/Victory-Brewing-Co1.jpeg",
+  logo_url: "http://beerstreetjournal.com/wp-content/uploads/Victory-Brewing-Logo1.png",
 )
 
 Brewery.create(
   name: "Tröegs",
   location: "Hershey, PA",
-  logo_url: "http://www.theshepnj.com/wp-content/uploads/2013/01/troegs-brewery.jpg"
+  logo_url: "http://woodbineslic.com/files/7114/2869/6762/Troegs_Beer_Logo_2.png"
 )
 
 Brewery.create(
   name: "Flying Dog",
   location: "Frederick, MD",
-  logo_url: "http://www.dcbeer.com/sites/default/files/news/flying%20dog%20logo.jpeg"
+  logo_url: "http://2beerguys.com/blog/wp-content/uploads/2013/01/FlyingDog_d.png"
 )
 
 Brewery.create(
   name: "Jolly Pumpkin Artisan Ale",
   location: "Dexter, MI",
   logo_url: "http://www.farmhousefest.com/images/2016/logos/jolly-pumpkin.png"
+)
+
+Brewery.create(
+  name: "Southern Pacific",
+  location: "San Francisco, CA",
+  logo_url: "http://bayareabrewerytours.com/wp-content/uploads/2015/11/brew_southernpacific.png"
 )
